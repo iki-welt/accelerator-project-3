@@ -1,0 +1,15 @@
+.container {
+  width: $mobile-width;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 100px;
+  }
+}

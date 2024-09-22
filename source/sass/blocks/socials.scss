@@ -1,0 +1,48 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  // color: $base-dark;
+  // border: 1px solid $base-border-color;
+
+  &:hover {
+    // background-color: $base-light;
+    // color: $base-dark;
+    // border-color: $base-dark;
+    // outline: none;
+  }
+
+  &:focus {
+    // outline: none;
+  }
+
+  &:focus-visible {
+    // background-color: $base-light;
+    // color: $base-dark;
+    // border-color: $base-light;
+    // outline: none;
+  }
+
+  &:active {
+    // background-color: $base-accent;
+    // color: $base-light;
+    // border-color: $base-accent;
+    // outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    // background-color: $base-light;
+    // color: $base-disabled;
+    // border-color: $base-disabled;
+    // outline: none;
+  }
+}
