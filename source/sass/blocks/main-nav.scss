@@ -1,9 +1,19 @@
 // .main-nav {}
 // .main-nav__overlay {}
 // .main-nav__burger {}
-// .main-nav__list {}
+.main-nav__list {
+  text-transform: uppercase;
+
+  @include font-set(16px, 16px, 500);
+}
+
 // .main-nav__item {}
 // .main-nav__link {&--submenu{}}
-// .main-nav__submenu {}
+.main-nav__submenu {
+  text-transform: capitalize;
+
+  @include font-set(16px, 16px, 400);
+}
+
 // .main-nav__subitem {}
 // .main-nav__sublink {}

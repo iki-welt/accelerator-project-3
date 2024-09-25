@@ -1,6 +1,25 @@
 // .promo-slide {}
 // .promo-slide__container {}
 // .promo-slide__pic-wrapper {}
-// .promo-slide__content {}
-// .promo-slide__title {}
+.promo-slide__content {
+  @include font-set(16px, 20px, 400);
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
+.promo-slide__title {
+  @include font-set(22px, 26px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 62px;
+  }
+}
 // .promo-slide__link {}

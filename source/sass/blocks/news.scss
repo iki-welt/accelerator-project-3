@@ -1,9 +1,21 @@
 // .news {}
 // .news__container {}
 // .news__title {}
-// .news__tab-list {}
+.news__tab-list {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include font-set(12px, 12px, 500);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 // .news__tab-item {}
-// .news__tab {}
+.news__tab {
+  text-transform: uppercase;
+}
 // .news__slider {}
 // .news__slider-wrapper {}
 // .news__slide {}

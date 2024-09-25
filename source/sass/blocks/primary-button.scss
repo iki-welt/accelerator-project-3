@@ -1,3 +1,8 @@
-// .primary-button {&--dark}
+.primary-button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @include font-set(12px, 12px, 500);
+  // &--dark {}
+}
 // .primary-button__name {}
 // .primary-button__icon {}

@@ -3,5 +3,18 @@
 // .program-card__content {}
 // .program-card__title {}
 // .program-card__descr-wrapper {}
-// .program-card__descr-wrapper p {}
+.program-card__descr-wrapper p {
+  font-size: 12px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 // .program-card__link {}

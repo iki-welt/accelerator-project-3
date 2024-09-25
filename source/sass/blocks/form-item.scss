@@ -1,5 +1,27 @@
 // .form-item {}
-// .form-item__name {&--name &--phone &--comment &--hidden &--city}
-// .form-item__checkbox {}
+.form-item__name {
+  // &--name &--phone &--comment &--hidden &--city
+  @include font-set(12px, 14px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+.form-item__checkbox {
+  @include font-set(12px, 14px, 400);
+
+  @media (min-width: $tablet-width) {
+    line-height: 12px;
+  }
+}
+
+.form-item__inp {
+  @include font-set(14px, 14px, 400);
+}
 // .form-item__mark {}
 // .form-item__descr {}

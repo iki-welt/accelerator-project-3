@@ -13,16 +13,21 @@ body {
   grid-template-rows: auto 1fr auto;
 
   // color: $base-dark;
-  // font-family: $primary-font;
+  font-family: $primary-font;
 
   // background-color: $base-light;
 
-  // @include font-set(14px, 20px, 400);
+  @include font-set(14px, 20px, 400);
 
-  // @media (min-width: $tablet-width) {
-  //   font-size: 16px;
-  //   line-height: 24px;
-  // }
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 img {

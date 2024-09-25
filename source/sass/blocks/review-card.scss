@@ -1,9 +1,42 @@
 // .review-card {}
 // .review-card__author {}
 // .review-card__pic-wrapper {}
-// .review-card__name {}
+.review-card__name {
+  @include font-set(14px, 18px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
 // .review-card__descr-list {}
 // .review-card__descr-item {dt dd}
+.review-card__descr-item dt {
+  text-transform: uppercase;
+
+  @include font-set(12px, 12px, 400);
+}
+
+.review-card__descr-item dd {
+  font-size: 12px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
 // .review-card__content {}
 // .review-card__title {}
 // .review-card__content blockquote {p}

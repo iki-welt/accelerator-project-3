@@ -1,6 +1,19 @@
 // .form-modal {}
 // .form-modal__overlay {}
 // .form-modal__popup {}
-// .form-modal__title {}
+.form-modal__title {
+  @include font-set(18px, 22px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
 // .form-modal__intro {}
 // .form-modal__form {}

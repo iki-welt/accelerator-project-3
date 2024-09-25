@@ -4,5 +4,18 @@
 // .news-card__date {}
 // .news-card__title {}
 // .news-card__descr-wrapper {}
-// .news-card__descr-wrapper p {}
+.news-card__descr-wrapper p {
+  font-size: 12px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 // .news-card__link {}

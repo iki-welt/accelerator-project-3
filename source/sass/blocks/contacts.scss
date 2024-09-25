@@ -3,7 +3,11 @@
 // .contacts__title {}
 // .contacts__list {}
 // .contacts__item {}
-// .contacts__item-name {}
+.contacts__item-name {
+  text-transform: uppercase;
+
+  @include font-set(12px, 12px, 400);
+}
 // .contacts__item-value {}
 // .contacts__item-link {}
 // .contacts__pic-wrapper {}

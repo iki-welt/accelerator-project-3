@@ -4,6 +4,18 @@
 // .grant__title {}
 // .grant__col p {}
 // .grant__pic-wrapper {}
-// .grant__subtitle {}
+.grant__subtitle {
+  @include font-set(18px, 22px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
 // .grant__list {}
 // .grant__item {}

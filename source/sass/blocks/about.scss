@@ -2,6 +2,35 @@
 // .about__container {}
 // .about__col {}
 // .about__title {}
+
+.about__container h3 {
+  @include font-set(18px, 22px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.about__title + p {
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
 // .about__link {}
 // .about__stat-list {}
 // .about__stat-item {}

@@ -4,6 +4,30 @@
 // .page-footer__nav-list {}
 // .page-footer__nav-item {}
 // .page-footer__nav-link {}
-// .page-footer__privacy {}
-// .page-footer__copy {}
+.page-footer__privacy {
+  @include font-set(12px, 14px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
+.page-footer__copy {
+  @include font-set(12px, 14px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
 // .page-footer__social-list {}
