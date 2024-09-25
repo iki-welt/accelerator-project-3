@@ -12,10 +12,10 @@ body {
   padding: 0;
   grid-template-rows: auto 1fr auto;
 
-  // color: $base-dark;
+  color: $base-black;
   font-family: $primary-font;
 
-  // background-color: $base-light;
+  background-color: $base-color;
 
   @include font-set(14px, 20px, 400);
 
