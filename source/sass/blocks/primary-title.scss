@@ -1,4 +1,6 @@
 .primary-title {
+  color: $base-accent;
+
   @include font-set(20px, 20px, 400);
   // &--light {}
 

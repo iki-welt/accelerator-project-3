@@ -1,15 +1,61 @@
-// .stat-item {}
+.stat-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 16px 14px 16px 15px;
+  border: 1px solid $base-white;
+  border-radius: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: -22px;
+    left: -20px;
+    background-color: $base-accent;
+    background-size: 18px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/__spritemap#sprite-star-view");
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 201px);
+    gap: 0;
+    align-items: center;
+    width: 484px;
+    padding: 30px 40px;
+    }
+}
+
 .stat-item p {
-  @include font-set(14px, 20px, 400);
+  @include font-set(14px, 20px, 300);
 
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      width: 201px;
+    }
+  }
 }
 
 .stat-item strong {
+  text-transform: uppercase;
+
   @include font-set(16px, 20px, 400);
 
   @media (min-width: $tablet-width) {
@@ -20,5 +66,19 @@
   @media (min-width: $desktop-width) {
     font-size: 26px;
     line-height: 30px;
+  }
+}
+
+.stat-item:first-of-type p:last-child span {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.stat-item:first-of-type p:last-child br {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
