@@ -1,4 +1,10 @@
-// .page-header {}
-// .page-header__container {}
-// .page-header__logo {}
-// .page-header__nav {}
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+  }
+}

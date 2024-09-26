@@ -1,6 +1,73 @@
-// .burger {}
+.burger {
+  background-color: $base-white;
+
+  &--is-open {
+    background-color: $base-accent;
+  }
+}
+
 .burger__name {
   font-size: 14px;
   line-height: 14px;
+
+  &--is-open {
+    color: $base-white;
+  }
 }
-// .burger__icon {}
+
+.burger__icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+
+  &--is-open {
+    background-color: $base-white;
+  }
+}
+
+.burger__icon span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 14px;
+  height: 1px;
+  background-color: $base-white;
+
+  &:first-of-type {
+    top: 20px;
+  }
+
+  &:nth-of-type(2) {
+    top: 23px;
+  }
+
+  &:nth-of-type(3) {
+    top: 26px;
+  }
+}
+
+.burger__icon--is-open span {
+  background-color: $base-accent;
+  left: 15px;
+  transform: none;
+
+  &:first-of-type {
+    width: 23px;
+    top: 15px;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+  }
+
+  &:nth-of-type(2) {
+    display: none;
+  }
+
+  &:nth-of-type(3) {
+    width: 23px;
+    top: 31px;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
+}

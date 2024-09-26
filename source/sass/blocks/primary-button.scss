@@ -1,8 +1,27 @@
 .primary-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: $base-accent;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: 1px solid $base-accent;
+  border-radius: 28px;
+  background-color: transparent;
+
   @include font-set(12px, 12px, 500);
   // &--dark {}
 }
-// .primary-button__name {}
-// .primary-button__icon {}
+.primary-button__name {
+  padding: 20px;
+}
+
+.primary-button__icon {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 5px 5px 5px 0;
+  border-radius: 17px;
+  background-color: $base-accent;
+}
