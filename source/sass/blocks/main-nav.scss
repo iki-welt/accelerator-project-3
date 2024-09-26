@@ -15,19 +15,21 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 30px;
-      padding-left: 437px;
+      padding-left: calc($tablet-padds + 392px);
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 1054px;
+      padding-left: calc($desktop-padds + 954px);
     }
   }
 }
 
 .main-nav__overlay {
+  &--is-open {
   width: 100vw;
   height: 100vh;
   background-color: $overlay-dark;
+  }
 }
 
 .main-nav__container--is-open .main-nav__burger {
@@ -69,9 +71,9 @@
     display: block;
     width: 12px;
     height: 12px;
-    color: $base-white;
-    background-size: 12px 12px;
-    background-image: url("/__spritemap#sprite-arrow-down-view");
+    background-color: $base-white;
+    mask-size: 12px 12px;
+    mask-image: url("/__spritemap#sprite-arrow-down-view");
   }
 }
 

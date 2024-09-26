@@ -1,4 +1,8 @@
-// .hero {}
+.hero {
+  --header-height: 78px;
+
+  margin-top: calc(var(--header-height) * -1);
+}
 // .hero__slider {}
 // .hero__slider-pagination {}
 // .hero__slider-wrapper {}

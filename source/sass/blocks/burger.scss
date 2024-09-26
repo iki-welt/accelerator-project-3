@@ -7,6 +7,7 @@
 }
 
 .burger__name {
+  padding: 20px;
   font-size: 14px;
   line-height: 14px;
 
@@ -20,6 +21,10 @@
   width: 46px;
   height: 46px;
   border-radius: 23px;
+
+  &::after {
+    display: none;
+  }
 
   &--is-open {
     background-color: $base-white;

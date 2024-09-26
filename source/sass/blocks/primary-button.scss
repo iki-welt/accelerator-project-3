@@ -1,8 +1,8 @@
 .primary-button {
   display: flex;
   align-items: center;
+  width: min-content;
   padding: 0;
-  color: $base-accent;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid $base-accent;
@@ -10,10 +10,17 @@
   background-color: transparent;
 
   @include font-set(12px, 12px, 500);
+  @include link-default;
+  color: $base-accent;
   // &--dark {}
 }
 .primary-button__name {
-  padding: 20px;
+  width: max-content;
+  padding: 16px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 30px;
+  }
 }
 
 .primary-button__icon {
@@ -24,4 +31,24 @@
   margin: 5px 5px 5px 0;
   border-radius: 17px;
   background-color: $base-accent;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: $base-white;
+    mask-size: 10px 10px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+  }
 }

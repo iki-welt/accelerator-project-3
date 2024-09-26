@@ -3,6 +3,11 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
+// PADDING
+$mobile-padds: 15px;
+$tablet-padds: 45px;
+$desktop-padds: 100px;
+
 // FONTS
 $primary-font: "Manrope", "Arial", sans-serif;
 
@@ -16,3 +21,4 @@ $error-color: #ff5e66;
 $disabled-color: #a9afb7;
 $overlay-light: rgba(49, 109, 194, 0.2);
 $overlay-dark: rgba(13, 29, 51, 0.4);
+
