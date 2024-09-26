@@ -1,9 +1,105 @@
-// .program-card {}
-// .program-card__pic-wrapper {}
-// .program-card__content {}
-// .program-card__title {}
-// .program-card__descr-wrapper {}
+.program-card {
+  display: grid;
+  width: 290px;
+  height: 400px;
+  border-radius: 12px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 392px;
+    height: 420px;
+  }
+}
+
+.program-card__pic-wrapper {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  &::before {
+    border-radius: 12px;
+  }
+}
+
+.program-card__pic-wrapper img {
+  border-radius: 12px;
+}
+
+.program-card__content {
+  align-self: end;
+  position: relative;
+  z-index: 1;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  margin: 200px 10px 18px;
+
+  @media (min-width: $tablet-width) {
+    margin: 200px 20px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 200px 50px 17px 20px;
+  }
+}
+
+.program-card__title {
+  position: relative;
+  width: 146px;
+  padding: 18px 18px 6px 18px;
+  margin: 0;
+  color: $base-accent;
+  background-color: $base-white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: -11px;
+    display: block;
+    width: 15px;
+    height: 20px;
+    border-bottom: 4px solid $base-white;
+    border-left: 4px solid $base-white;
+    border-bottom-left-radius: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 173px;
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 194px;
+  }
+}
+
+.program-card__descr-wrapper {
+  display: grid;
+  grid-template-columns: 188px 30px;
+  gap: 16px;
+  padding: 12px 18px 15px;
+  background-color: $base-white;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 202px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 239px 30px;
+  }
+}
+
 .program-card__descr-wrapper p {
+  margin: 0;
   font-size: 12px;
   line-height: 14px;
 
@@ -17,4 +113,7 @@
     line-height: 18px;
   }
 }
-// .program-card__link {}
+
+.program-card__link {
+  align-self: center;
+}

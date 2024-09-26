@@ -1,8 +1,55 @@
 // .programs {}
-// .programs__container {}
-// .programs__title {}
-// .programs__link {}
-// .programs__slider {}
-// .programs__slider-wrapper {}
+.programs__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.programs__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0;
+  }
+}
+.programs__link {
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    margin: 0;
+  }
+}
+
+.programs__slider {
+  padding-top: 60px;
+  margin-top: -60px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.programs__slider-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
 // .programs__slide {}
 // .programs__controls {}

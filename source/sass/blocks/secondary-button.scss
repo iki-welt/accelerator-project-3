@@ -1,2 +1,24 @@
 // .secondary-button {}
-// .secondary-button__icon {}
+
+.secondary-button__icon {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
+  background-color: $base-accent;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: $base-white;
+    mask-size: 10px 10px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+  }
+}
