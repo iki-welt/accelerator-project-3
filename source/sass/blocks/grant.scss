@@ -1,21 +1,130 @@
-// .grant {}
-// .grant__container {}
-// .grant__col {}
-// .grant__title {}
-// .grant__col p {}
-// .grant__pic-wrapper {}
+.grant {
+  background-color: $base-accent;
+  color: $base-white;
+}
+
+.grant__container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 498px);
+    gap: 138px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.grant__title {
+  margin: 0;
+  margin-bottom: 15px;
+  color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.grant__col:first-child p {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.grant__pic-wrapper {
+  border-radius: 16px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.grant__pic-wrapper img {
+  border-radius: 16px;
+}
+
 .grant__subtitle {
+  padding: 10px 0;
+  margin: 0;
+  margin-bottom: 20px;
+
   @include font-set(18px, 22px, 400);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
     font-size: 32px;
     line-height: 36px;
   }
 }
-// .grant__list {}
-// .grant__item {}
+
+.grant__list {
+  display: grid;
+  gap: 15px;
+  @include list-default;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 305px);
+    gap: 25px 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+}
+
+.grant__item {
+  position: relative;
+  padding: 25px 26px;
+  border: 1px solid $base-white;
+  border-radius: 16px;
+  counter-increment: grant 1;
+
+  &::before {
+    content: counter(grant);
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: $base-accent;
+    border-radius: 30px;
+
+    @include font-set(18px, 18px, 500);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 31px 50px 31px 26px;
+
+    &::before {
+      top: -15px;
+      left: -20px;
+      width: 42px;
+      height: 42px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 31px 26px;
+  }
+}
