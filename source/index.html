@@ -412,32 +412,32 @@
   </section>
 
   <section class="news" data-test="news">
+    <h2 class="primary-title news__title">Новости и материалы</h2>
+
+    <ul class="news__tab-list">
+      <li class="news__tab-item">
+        <button class="news__tab news__tab--current" type="button">общее</button>
+      </li>
+      <li class="news__tab-item">
+        <button class="news__tab" type="button">Волонтёрство</button>
+      </li>
+      <li class="news__tab-item">
+        <button class="news__tab" type="button">Стажировки</button>
+      </li>
+      <li class="news__tab-item">
+        <button class="news__tab" type="button">Карьера</button>
+      </li>
+      <li class="news__tab-item">
+        <button class="news__tab" type="button">путешествия</button>
+      </li>
+    </ul>
+
     <div class="container news__container">
-      <h2 class="primary-title news__title">Новости и материалы</h2>
-
-      <ul class="news__tab-list">
-        <li class="news__tab-item">
-          <button class="news__tab" type="button">общее</button>
-        </li>
-        <li class="news__tab-item">
-          <button class="news__tab" type="button">Волонтёрство</button>
-        </li>
-        <li class="news__tab-item">
-          <button class="news__tab" type="button">Стажировки</button>
-        </li>
-        <li class="news__tab-item">
-          <button class="news__tab" type="button">Карьера</button>
-        </li>
-        <li class="news__tab-item">
-          <button class="news__tab" type="button">путешествия</button>
-        </li>
-      </ul>
-
       <div class="swiper news__slider">
         <div class="swiper-wrapper news__slider-wrapper">
 
-          <div class="swiper-slide news__slide news-card">
-            <div class="news-card__pic-wrapper">
+          <div class="swiper-slide news__slide news-card news-card--first">
+            <div class="news-card__pic-wrapper news-card__pic-wrapper--first">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/news-1-l-x1.webp 1x, img/news-1-l-x2.webp 2x" width="604" height="400">
@@ -454,8 +454,8 @@
             </div>
             <div class="news-card__content">
               <time class="news-card__date" datetime="2023-03-23">23/03/2023</time>
-              <h3 class="primary-subtitle news-card__title">Интервью с участницей программы стажировки</h3>
-              <div class="news-card__descr-wrapper">
+              <h3 class="primary-subtitle news-card__title news-card__title--first">Интервью с участницей программы стажировки</h3>
+              <div class="news-card__descr-wrapper news-card__descr-wrapper--first">
                 <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
                 <a class="secondary-button news-card__link" href="#">
                   <span class="visually-hidden">подробнее</span>
@@ -483,7 +483,7 @@
             </div>
             <div class="news-card__content">
               <time class="news-card__date" datetime="2023-03-20">20/03/2023</time>
-              <h3 class="primary-subtitlenews-card__title">Путешествуем по миру</h3>
+              <h3 class="primary-subtitle news-card__title">Путешествуем по миру</h3>
               <div class="news-card__descr-wrapper">
                 <p>Какие места посещают наши студенты весной</p>
                 <a class="secondary-button news-card__link" href="#">
