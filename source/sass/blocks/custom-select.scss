@@ -15,11 +15,22 @@
     mask-image: url("/__spritemap#sprite-arrow-down-view");
     mask-size: 16px 16px;
   }
+
+  &--modal::after {
+    top: 14px;
+    background-color: $base-black;
+  }
 }
+
+
 
 .custom-select__current-value {
   height: 52px;
   padding: 16px 53px 16px 25px;
+}
+
+.custom-select--modal .custom-select__current-value {
+    height: 42px;
 }
 
 .custom-select__list {

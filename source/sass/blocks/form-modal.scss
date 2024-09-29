@@ -1,10 +1,82 @@
-// .form-modal {}
-// .form-modal__overlay {}
-// .form-modal__popup {}
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.form-modal__overlay {
+  height: 100vh;
+  padding-top: 23px;
+  background-color: $overlay-dark;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 204px;
+  }
+}
+
+.form-modal__popup {
+  position: relative;
+  width: 290px;
+  padding: 40px 15px;
+  margin: 0 auto 14px;
+  background-color: $base-white;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 510px;
+    padding: 60px 80px;
+    margin: 0 auto 180px;
+
+  }
+}
+
+.form-modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask-image: url("/__spritemap#sprite-cross-view");
+    mask-size: 16px 16px;
+    background-color: $base-accent;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 15px;
+    right: 15px;
+    width: 37px;
+    height: 37px;
+
+    &::after {
+      width: 22px;
+      height: 22px;
+      mask-size: 22px 22px;
+    }
+  }
+}
+
 .form-modal__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+
   @include font-set(18px, 22px, 400);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
     font-size: 28px;
     line-height: 28px;
   }
@@ -15,5 +87,15 @@
   }
 }
 
-// .form-modal__intro {}
+.form-modal__intro {
+  text-align: center;
+  width: 220px;
+  margin: 0 auto 25px;
+
+  @media (min-width: $tablet-width) {
+    width: unset;
+    margin-bottom: 30px;
+  }
+}
+
 // .form-modal__form {}

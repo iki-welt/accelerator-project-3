@@ -939,26 +939,27 @@
   <section class="form-modal">
     <div class="form-modal__overlay">
       <div class="form-modal__popup">
+        <button class="form-modal__close-button" type="button"></button>
         <h2 class="primary-title form-modal__title">Напишите нам</h2>
         <p class="form-modal__intro">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
 
         <form class="form-modal__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <ul class="form__list">
-            <li class="form__item form-item">
+          <ul class="form__list form__list--modal">
+            <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-name">Имя</label>
-              <input class="form-item__inp form-item__inp--name" id="modal-name" type="text">
+              <input class="form-item__inp form-item__inp--name form-item__inp--modal" id="modal-name" type="text">
             </li>
 
-            <li class="form__item form-item">
+            <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-phone">Телефон</label>
-              <input class="form-item__inp form-item__inp--phone" id="modal-phone" type="number">
+              <input class="form-item__inp form-item__inp--phone form-item__inp--modal" id="modal-phone" type="number">
             </li>
 
-            <li class="form__item form-item">
+            <li class="form__item form-item form-item--modal">
               <p class="form-item__name">Выберите город</p>
               <input class="form-item__inp form-item__inp--hidden" id="city" type="hidden">
-              <div class="custom-select form-item__inp form-item__inp--city">
-                <div class="custom-select__current-value"></div>
+              <div class="custom-select form-item__inp form-item__inp--city form-item__inp--modal custom-select--modal">
+                <div class="custom-select__current-value custom-select__current-value"></div>
                 <ul class="custom-select__list">
                   <li class="custom-select__item">Санкт-Петербург</li>
                   <li class="custom-select__item">Санкт-Петербург</li>
@@ -968,16 +969,16 @@
               </div>
             </li>
 
-            <li class="form__item form-item">
+            <li class="form__item form-item form-item--modal">
               <label class="form-item__checkbox">
                 <input class="form-item__inp form-item__inp--hidden" type="checkbox"
                   name="modal-personal-data-acception" required>
-                <span class="form-item__mark"></span>
+                <span class="form-item__mark form-item__mark--modal"></span>
                 <span class="form-item__descr">Я согласен на обработку моих персональных данных</span>
               </label>
             </li>
           </ul>
-          <button class="primary-button primary-button--dark form__submit">
+          <button class="primary-button form__submit form__submit--modal">
             <span class="primary-button__name form__submit-name">Отправить</span>
             <span class="primary-button__icon form__submit-icon"></span>
           </button>

@@ -1,20 +1,39 @@
-// .form {}
 .form__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   @include list-default;
+
+  &--modal {
+    gap: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--modal {
+      gap: 20px;
+    }
+  }
 }
+
 // .form__item {}
 
 .form__submit {
   min-width: 260px;
   margin-top: 20px;
 
+  &--modal {
+    margin-top: 25px;
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 352px;
     margin-top: 40px;
+
+    &--modal {
+      min-width: 194px;
+      margin: 30px auto 0;
+    }
   }
 
   @media (min-width: $desktop-width) {

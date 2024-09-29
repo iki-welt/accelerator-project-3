@@ -1,7 +1,18 @@
 .form-item {
   display: grid;
   gap: 12px;
+
+  &--modal {
+    gap: 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--modal {
+      gap: 12px;
+    }
+  }
 }
+
 .form-item__name {
   margin: 0;
   opacity: 0.8;
@@ -37,6 +48,12 @@
 
   @include font-set(12px, 12px, 400);
 
+  &--modal {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-color: $base-black-03;
+  }
+
   &--hidden {
     display: none;
   }
@@ -49,7 +66,17 @@
     padding: 0;
   }
 
+
   @media (min-width: $tablet-width) {
+    &--modal {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &--city {
+      padding: 0;
+    }
+
     &--comment {
       min-height: 88px;
     }
@@ -66,6 +93,10 @@
   height: 20px;
   border-radius: 2px;
   background-color: $base-white;
+
+  &--modal {
+    background-color: $base-accent;
+  }
 }
 
 .form-item__inp[type="checkbox"]:checked+.form-item__mark {
@@ -81,6 +112,10 @@
     background-color: $base-accent;
     mask-image: url("/__spritemap#sprite-check-view");
     mask-size: 10px 10px;
+  }
+
+  &--modal::after {
+    background-color: $base-white;
   }
 }
 
