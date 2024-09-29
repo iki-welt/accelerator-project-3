@@ -1,8 +1,30 @@
 // .question {}
-// .question__wrapper {}
-.question__wrapper summary{
+.question__wrapper {
+  padding: 22px 17px;
+  border: 2px solid $base-accent;
+  border-radius: 14px;
+
+  &[open] {
+    background-color: $base-accent;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 42px;
+  }
+}
+
+.question__wrapper summary {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center;
+  color: $base-accent;
+  list-style: none;
+
   @include font-set(16px, 18px, 400);
-  // span span
 
   @media (min-width: $tablet-width) {
     font-size: 22px;
@@ -14,4 +36,52 @@
     line-height: 34px;
   }
 }
-// .question__wrapper p {}
+
+.question__wrapper[open] summary {
+  color: $base-white;
+}
+
+.question__wrapper summary span:last-of-type {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: $base-accent;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background-color: $base-white;
+  }
+
+  &::before {
+    width: 14px;
+    height: 1px;
+  }
+
+  &::after {
+    width: 1px;
+    height: 14px;
+  }
+}
+
+.question__wrapper[open] summary span:last-of-type {
+  background-color: $base-white;
+
+  &::before,
+  &::after {
+    background-color: $base-accent;
+  }
+}
+
+.question__wrapper p {
+  margin: 0;
+  margin-top: 20px;
+  color: $base-white;
+}

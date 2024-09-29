@@ -1,5 +1,33 @@
 // .faq {}
-// .faq__container {}
-// .faq__title {}
-// .faq__questions-list {}
+.faq__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.faq__questions-list {
+  display: grid;
+  gap: 10px;
+
+  @include list-default;
+}
+
 // .faq__questions-item {}
