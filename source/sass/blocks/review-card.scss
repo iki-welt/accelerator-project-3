@@ -1,7 +1,46 @@
-// .review-card {}
-// .review-card__author {}
+.review-card {
+  display: grid;
+  gap: 25px;
+  width: 290px;
+  padding: 32px 17px;
+  border: 2px solid $base-accent;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    width: 560px;
+    padding: 52px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 604px;
+    padding-right: 48px;
+  }
+}
+
+.review-card__author {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 15px 10px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 90px 1fr auto;
+    gap: 15px;
+  }
+}
+
 // .review-card__pic-wrapper {}
+
+.review-card__pic-wrapper img {
+  border-radius: 50%;
+}
+
 .review-card__name {
+  width: min-content;
+  margin: 0;
+  color: $base-accent;
+
   @include font-set(14px, 18px, 400);
 
   @media (min-width: $tablet-width) {
@@ -15,12 +54,36 @@
   }
 }
 
-// .review-card__descr-list {}
-// .review-card__descr-item {dt dd}
+.review-card__descr-list {
+  display: flex;
+  gap: 25px;
+  grid-column: 1/-1;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-column: unset;
+  }
+}
+
+.review-card__descr-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    gap: 11px;
+  }
+}
+
 .review-card__descr-item dt {
+  color: $base-accent;
   text-transform: uppercase;
 
   @include font-set(12px, 12px, 400);
+}
+
+.review-card__descr-item dd {
+  margin: 0;
 }
 
 .review-card__descr-item dd {
@@ -38,5 +101,19 @@
 }
 
 // .review-card__content {}
-// .review-card__title {}
-// .review-card__content blockquote {p}
+.review-card__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $base-accent;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+.review-card__content blockquote {
+  margin: 0;
+}
+
+.review-card__content blockquote p {
+  margin: 0;
+}

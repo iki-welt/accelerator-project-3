@@ -1,7 +1,38 @@
 // .reviews {}
-// .reviews__container {}
-// .reviews__title {}
-// .reviews__slider {}
-// .reviews__slider-wrapper {}
+.reviews__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.reviews__slider {
+  padding-top: 60px;
+  margin-top: -60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.reviews__slider-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 // .reviews__slide {}
 // .reviews__controls {}
