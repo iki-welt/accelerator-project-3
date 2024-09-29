@@ -1,5 +1,4 @@
-// .form-block {}
-.form-block__container {
+.form-block {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,53 +17,116 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../../img/form-bg-m-x1.jpg");
+    background: unset;
+    background-color: $base-color;
+  }
+}
 
-    @supports (background-image: url("../../img/form-bg-m-x1.webp")) {
-      background-image: url("../../img/form-bg-m-x1.webp");
-    }
+.form-block__container {
+  padding: 43px 10px 40px;
 
-    @media (resolution >=2dppx) {
-      background-image: url("../../img/form-bg-m-x2.jpg");
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding: 50px 58px;
 
-      @supports (background-image: url("../../img/form-bg-m-x2.webp")) {
-        background-image: url("../../img/form-bg-m-x2.webp");
+    &::after {
+      content: "";
+      display: block;
+      min-height: 100%;
+      width: 652px;
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      justify-self: end;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../../img/form-bg-m-x1.jpg");
+      border-radius: 16px;
+
+      @supports (background-image: url("../../img/form-bg-m-x1.webp")) {
+        background-image: url("../../img/form-bg-m-x1.webp");
+      }
+
+      @media (resolution >=2dppx) {
+        background-image: url("../../img/form-bg-m-x2.jpg");
+
+        @supports (background-image: url("../../img/form-bg-m-x2.webp")) {
+          background-image: url("../../img/form-bg-m-x2.webp");
+        }
       }
     }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/form-bg-l-x1.jpg");
+    padding: 60px 100px;
 
-    @supports (background-image: url("../../img/form-bg-l-x1.webp")) {
-      background-image: url("../../img/form-bg-l-x1.webp");
-    }
+    &::after {
+      width: 800px;
+      background-image: url("../../img/form-bg-l-x1.jpg");
 
-    @media (resolution >=2dppx) {
-      background-image: url("../../img/form-bg-l-x2.jpg");
+      @supports (background-image: url("../../img/form-bg-l-x1.webp")) {
+        background-image: url("../../img/form-bg-l-x1.webp");
+      }
 
-      @supports (background-image: url("../../img/form-bg-l-x2.webp")) {
-        background-image: url("../../img/form-bg-l-x2.webp");
+      @media (resolution >=2dppx) {
+        background-image: url("../../img/form-bg-l-x2.jpg");
+
+        @supports (background-image: url("../../img/form-bg-l-x2.webp")) {
+          background-image: url("../../img/form-bg-l-x2.webp");
+        }
       }
     }
   }
 }
 
-// .form-block__pic-wrapper {}
-// .form-block__content {}
+.form-block__form-wrapper {
+  padding: 15px 15px 27px;
+  color: $base-white;
+  background-color: $base-accent;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: 1;
+    width: 442px;
+    padding: 30px 52px 36px 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 490px;
+    padding: 30px 70px 40px;
+  }
+}
+
 .form-block__title {
+  margin: 0;
+  margin-bottom: 10px;
+
   @include font-set(18px, 22px, 400);
 
   @media (min-width: $tablet-width) {
+    padding: 11px 0;
+    margin-bottom: 20px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 14px 0;
     font-size: 32px;
     line-height: 36px;
   }
 }
 
-// .form-block__intro {}
+.form-block__intro {
+  margin: 0;
+  margin-bottom: 20px;
+  opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 // .form-block__form {}

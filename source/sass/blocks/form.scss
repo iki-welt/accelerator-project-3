@@ -1,4 +1,27 @@
 // .form {}
-// .form__list {}
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include list-default;
+}
 // .form__item {}
-// .form__submit {}
+
+.form__submit {
+  min-width: 260px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 352px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
+
+.form__submit span:first-child {
+  margin: 0 auto;
+}

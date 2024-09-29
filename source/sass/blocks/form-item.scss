@@ -1,5 +1,10 @@
-// .form-item {}
+.form-item {
+  display: grid;
+  gap: 12px;
+}
 .form-item__name {
+  margin: 0;
+  opacity: 0.8;
   // &--name &--phone &--comment &--hidden &--city
   @include font-set(12px, 14px, 400);
 
@@ -13,6 +18,9 @@
   }
 }
 .form-item__checkbox {
+  position: relative;
+  padding-left: 30px;
+
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {
@@ -21,7 +29,61 @@
 }
 
 .form-item__inp {
-  @include font-set(14px, 14px, 400);
+  padding: 16px 25px;
+  color: $base-white;
+  background-color: transparent;
+  border: 1px solid $base-white-03;
+  border-radius: 8px;
+
+  @include font-set(12px, 12px, 400);
+
+  &--hidden {
+    display: none;
+  }
+
+  &--comment {
+    min-height: 94px;
+  }
+
+  &--city {
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--comment {
+      min-height: 88px;
+    }
+  }
 }
-// .form-item__mark {}
-// .form-item__descr {}
+
+.form-item__mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: $base-white;
+}
+
+.form-item__inp[type="checkbox"]:checked+.form-item__mark {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $base-accent;
+    mask-image: url("/__spritemap#sprite-check-view");
+    mask-size: 10px 10px;
+  }
+}
+
+.form-item__descr {
+  opacity: 0.9;
+}

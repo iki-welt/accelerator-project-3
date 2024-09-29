@@ -1,2 +1,50 @@
-// .custom-select {}
-// .custom-select__item {&--current}
+.custom-select {
+  position: relative;
+
+  @include font-set (14px, 14px, 400);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $base-white;
+    mask-image: url("/__spritemap#sprite-arrow-down-view");
+    mask-size: 16px 16px;
+  }
+}
+
+.custom-select__current-value {
+  height: 52px;
+  padding: 16px 53px 16px 25px;
+}
+
+.custom-select__list {
+  display: none;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border: 1px solid $base-white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include list-default;
+}
+
+.custom-select__item {
+  min-height: 48px;
+  padding: 17px 20px;
+  color: $base-black;
+  background-color: $base-white;
+
+  &:hover {
+    color: $base-white;
+    background-color: $base-accent;
+  }
+  // &--current
+}

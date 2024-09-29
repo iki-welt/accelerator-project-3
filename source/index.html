@@ -812,7 +812,7 @@
 
   <section class="form-block" data-test="form">
     <div class="container form-block__container">
-      <div class="form-block__content">
+      <div class="form-block__form-wrapper">
         <h2 class="form-block__title">Напишите нам</h2>
         <p class="form-block__intro">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
 
@@ -836,13 +836,15 @@
             <li class="form__item form-item">
               <p class="form-item__name">Выберите город</p>
               <input class="form-item__inp form-item__inp--hidden" id="city" type="hidden">
-              <ul class="custom-select form-item__inp form-item__inp--city">
-                <li class="custom-select__item custom-select__item--current"></li>
+              <div class="custom-select form-item__inp form-item__inp--city">
+                <div class="custom-select__current-value"></div>
+                <ul class="custom-select__list">
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
-              </ul>
+                </ul>
+              </div>
             </li>
 
             <li class="form__item form-item">
@@ -952,14 +954,16 @@
 
             <li class="form__item form-item">
               <p class="form-item__name">Выберите город</p>
-              <input class="form-item__inp form-item__inp--hidden" id="modal-city" type="hidden">
-              <ul class="custom-select form-item__inp form-item__inp--city">
-                <li class="custom-select__item custom-select__item--current"></li>
+              <input class="form-item__inp form-item__inp--hidden" id="city" type="hidden">
+              <div class="custom-select form-item__inp form-item__inp--city">
+                <div class="custom-select__current-value"></div>
+                <ul class="custom-select__list">
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
                 <li class="custom-select__item">Санкт-Петербург</li>
-              </ul>
+                </ul>
+              </div>
             </li>
 
             <li class="form__item form-item">
