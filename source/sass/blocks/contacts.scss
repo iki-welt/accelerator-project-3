@@ -1,13 +1,117 @@
-// .contacts {}
-// .contacts__container {}
-// .contacts__title {}
-// .contacts__list {}
-// .contacts__item {}
+.contacts {
+  color: $base-white;
+  background-color: $base-accent;
+}
+
+.contacts__container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 82px 32px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-padds) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 62px;
+
+  @media (min-width: $tablet-width) {
+    gap: unset;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: $desktop-width) {
+    gap: 24px;
+  }
+}
+
 .contacts__item-name {
   text-transform: uppercase;
+  opacity: 0.8;
 
   @include font-set(12px, 12px, 400);
 }
-// .contacts__item-value {}
-// .contacts__item-link {}
-// .contacts__pic-wrapper {}
+
+.contacts__item-value {
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    max-width: 265px;
+  }
+}
+
+.contacts__item-link {
+  @include link-default;
+}
+
+.contacts__pic-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -32px;
+    display: block;
+    content: "";
+    width: 290px;
+    height: 2px;
+    background-color: $base-white;
+    opacity: 0.2;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      width: 678px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+
+    &::before {
+      top: -42px;
+      width: 1242px;
+    }
+  }
+}
+
+.contacts__pic-wrapper img {
+  border-radius: 16px;
+}
