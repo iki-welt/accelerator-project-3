@@ -1,17 +1,26 @@
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
+
+  @include list-default;
 }
 
 .socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  // color: $base-dark;
-  // border: 1px solid $base-border-color;
+  width: 26px;
+  height: 26px;
+  color: $base-white;
+  background-color: $base-accent;
+  border-radius: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+  }
 
   &:hover {
     // background-color: $base-light;
@@ -44,5 +53,12 @@
     // color: $base-disabled;
     // border-color: $base-disabled;
     // outline: none;
+  }
+}
+
+.socials__link svg {
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 16px;
   }
 }

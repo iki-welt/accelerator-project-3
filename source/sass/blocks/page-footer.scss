@@ -1,33 +1,124 @@
 // .page-footer {}
-// .page-footer__container {}
-// .page-footer__logo {}
-// .page-footer__nav-list {}
-// .page-footer__nav-item {}
-// .page-footer__nav-link {}
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px 0;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    justify-content: start;
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.page-footer__nav-list {
+  display: flex;
+  gap: 20px 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include list-default;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    margin-left: 52px;
+  }
+}
+
+.page-footer__nav-link {
+  @include link-default;
+}
+
 .page-footer__privacy {
+  margin-bottom: 10px;
+  color: inherit;
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
     font-size: 14px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    justify-self: end;
+    margin: 0;
     line-height: 18px;
   }
 }
 
 .page-footer__copy {
+  margin: 0;
+  margin-bottom: 15px;
+  opacity: 0.6;
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-bottom: 0;
     font-size: 14px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
     line-height: 18px;
   }
 }
 
-// .page-footer__social-list {}
+.page-footer__social-list {
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-1;
+    grid-row: 2/4;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+}

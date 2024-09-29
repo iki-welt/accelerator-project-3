@@ -1,4 +1,6 @@
 .form-block {
+  margin-top: 40px;
+  margin-bottom: 40px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +19,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     background: unset;
     background-color: $base-color;
   }
