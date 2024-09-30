@@ -2,6 +2,7 @@
   background-color: $base-white;
 
   &--is-open {
+    width: unset;
     background-color: $base-accent;
   }
 }
