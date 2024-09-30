@@ -10,9 +10,7 @@
   }
 }
 .slider-controls__pagination {
-  &--programs {
     display: none;
-  }
 
   @media (min-width: $tablet-width) {
     display: block;
