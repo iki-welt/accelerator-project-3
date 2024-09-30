@@ -19,14 +19,22 @@
     }
 
   @media (min-width: $tablet-width) {
-    display: block;
-    width: 562px;
-    height: 1px;
-    background-color: $base-accent-02;
+    &--scroll {
+      display: block;
+      width: 562px;
+      height: 1px;
+      background-color: $base-accent-02;
+    }
+
+    &--numders {
+      gap: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    width: 1136px;
+    &--scroll {
+      width: 1136px;
+    }
   }
 }
 
@@ -60,6 +68,14 @@
     color: $base-white;
     background-color: $base-accent;
     opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+
+    @include font-set(16px, 20px, 400);
   }
 }
 

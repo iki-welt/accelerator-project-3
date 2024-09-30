@@ -2,13 +2,17 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/grid';
-const Slides = document.querySelectorAll('.news__slide');
+
+const sliderContainer = document.querySelector('.news__slider');
+const Slides = sliderContainer.querySelectorAll('.news__slide');
 
 const changeSlideHeight = (slide, index) => {
-  if (index % 2 !== 0) {
-    slide.style.height = '240px';
-  } else {
-    slide.style.height = '330px';
+  if (sliderContainer.offsetWidth === 290) {
+    if (index % 2 !== 0) {
+      slide.style.height = '240px';
+    } else {
+      slide.style.height = '330px';
+    }
   }
 };
 
@@ -42,16 +46,19 @@ const newsSlider = new Swiper('.news__slider', {
       },
       allowTouchMove: 'true',
     },
-  },
-  768: {
-    // slidesPerView: 2,
-    // spaceBetween: 30,
-    // allowTouchMove: 'true',
-  },
-  1440: {
-    // slidesPerView: 3,
-    // spaceBetween: 32,
-    // allowTouchMove: 'false',
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+      },
+      allowTouchMove: 'true',
+    },
+    1440: {
+      // slidesPerView: 3,
+      // spaceBetween: 32,
+      // allowTouchMove: 'false',
+    },
   },
 },
 );
