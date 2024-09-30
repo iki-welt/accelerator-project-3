@@ -12,6 +12,12 @@
 .slider-controls__pagination {
     display: none;
 
+    &--numbers {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
   @media (min-width: $tablet-width) {
     display: block;
     width: 562px;
@@ -33,6 +39,27 @@
 
   @media (min-width: $desktop-width) {
     width: 1136px;
+  }
+}
+
+.slider-controls__count-bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  color: $base-accent;
+  text-align: center;
+  border-radius: 13px;
+  background-color: transparent;
+  opacity: 0.5;
+
+  @include font-set(14px, 14px, 500);
+
+  &--active {
+    color: $base-white;
+    background-color: $base-accent;
+    opacity: 1;
   }
 }
 
