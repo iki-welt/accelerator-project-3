@@ -49,6 +49,7 @@
   @include font-set(12px, 12px, 400);
 
   &--modal {
+    color: $base-black;
     padding-top: 13px;
     padding-bottom: 13px;
     border-color: $base-black-03;
