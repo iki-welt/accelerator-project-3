@@ -1,3 +1,68 @@
-// .slider-controls {}
-// .slider-controls__pagination {}
-// .slider-controls__button {&--prev &--next}
+.slider-controls {
+  display: grid;
+  grid-template-columns: 22px 22px;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 22px 22px;
+    gap: 10px;
+    align-items: center;
+  }
+}
+.slider-controls__pagination {
+  &--programs {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 562px;
+    height: 1px;
+    background-color: $base-accent-02;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1136px;
+  }
+}
+
+.slider-controls__pagination-fill {
+  display: block;
+  width: 562px;
+  height: 1px;
+  background-color: $base-accent;
+  transform-origin: 0 0;
+
+  @media (min-width: $desktop-width) {
+    width: 1136px;
+  }
+}
+
+.slider-controls__button {
+  z-index: 10;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-slider-arrow-view");
+    mask-size: 10px 10px;
+    background-color: $base-accent;
+  }
+
+  &--next::after{
+    transform: translate(-50%, -50%);
+  }
+
+  &--prev::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

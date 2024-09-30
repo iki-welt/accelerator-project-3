@@ -329,42 +329,14 @@
             </div>
           </div>
 
-          <div class="swiper-slide programs__slide program-card">
-            <div class="overlayed-pic program-card__pic-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/program-2-l-x1.webp 1x, img/program-2-l-x2.webp 2x" width="392" height="420">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/program-2-m-x1.webp 1x, img/program-2-m-x2.webp 2x" width="324" height="420">
-                <source type="image/webp" srcset="img/program-2-s-x1.webp 1x, img/program-2-s-x2.webp 2x" width="290"
-                  height="400">
-                <source type="image/jpeg" media="(min-width: 1440px)"
-                  srcset="img/program-2-l-x1.jpg 1x, img/program-2-l-x2.jpg 2x" width="392" height="420">
-                <source type="image/jpeg" media="(min-width: 768px)"
-                  srcset="img/program-2-m-x1.jpg 1x, img/program-2-m-x2.jpg 2x" width="324" height="420">
-                <img src="img/program-2-s-x1.jpg" srcset="img/program-2-s-x2.jpg 2x" width="290" height="400" alt="">
-              </picture>
-            </div>
-            <div class="program-card__content">
-              <h3 class="primary-subtitle program-card__title">Религия</h3>
-              <div class="program-card__descr-wrapper">
-                <p>Пара слов о программе.</p>
-                <a class="secondary-button program-card__link" href="#">
-                  <span class="visually-hidden">подробнее о программе</span>
-                  <span class="secondary-button__icon"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div class="slider-controls programs__controls">
-          <div class="swiper-pagination slider-controls__pagination"></div>
-          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev">
+          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--programs"></div>
+          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--programs-prev">
             <span class="visually-hidden">предыдущий слайд</span>
           </div>
-          <div class="swiper-button-next slider-controls__button slider-controls__button--next">
+          <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--programs-next">
             <span class="visually-hidden">следующий слайд</span>
           </div>
         </div>
@@ -557,11 +529,11 @@
         </div>
 
         <div class="slider-controls news__controls">
-          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev">
+          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--news-prev">
             <span class="visually-hidden">предыдущий слайд</span>
           </div>
-          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--numbers"></div>
-          <div class="swiper-button-next slider-controls__button slider-controls__button--next">
+          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--numbers slider-controls__pagination--news"></div>
+          <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--news-next">
             <span class="visually-hidden">следующий слайд</span>
           </div>
         </div>
@@ -756,11 +728,11 @@
       </div>
 
       <div class="slider-controls reviews__controls">
-        <div class="swiper-pagination slider-controls__pagination"></div>
-        <div class="swiper-button-prev slider-controls__button slider-controls__button--prev">
+        <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--reviews"></div>
+        <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--reviews-prev">
           <span class="visually-hidden">предыдущий слайд</span>
         </div>
-        <div class="swiper-button-next slider-controls__button slider-controls__button--next">
+        <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--reviews-next">
           <span class="visually-hidden">следующий слайд</span>
         </div>
       </div>

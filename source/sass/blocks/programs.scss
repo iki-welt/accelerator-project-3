@@ -1,4 +1,9 @@
-// .programs {}
+.programs {
+  @media (min-width: $tablet-width) {
+    overflow: hidden;
+  }
+}
+
 .programs__container {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -36,20 +41,69 @@
 }
 
 .programs__slider {
-  padding-top: 60px;
+  width: 290px;
   margin-top: -60px;
 
   @media (min-width: $tablet-width) {
+    width: 678px;
     grid-column: 1/-1;
     padding-top: 0;
     margin-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+  }
+}
+
+.programs__slider.swiper {
+  @media (min-width: $tablet-width) {
+    overflow: visible;
+  }
+
+  @media (min-width: $desktop-width) {
+    overflow: hidden;
+  }
 }
 
 .programs__slider-wrapper {
+  padding-top: 60px;
+
   @media (min-width: $tablet-width) {
+    padding-top: 0;
     margin-bottom: 40px;
+
   }
 }
-// .programs__slide {}
-// .programs__controls {}
+
+.programs__slider-wrapper.swiper-wrapper {
+  height: unset;
+}
+
+.programs__slide.swiper-slide {
+  display: grid;
+  width: 290px;
+  height: 400px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 392px;
+    height: 420px;
+  }
+}
+
+.programs__controls {
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    top: unset;
+    right: unset;
+  }
+}
