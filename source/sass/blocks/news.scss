@@ -95,6 +95,11 @@
     width: 678px;
     height: 792px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    height: 472px;
+  }
 }
 
 .news__slider-wrapper {
@@ -106,6 +111,10 @@
 
   @media (min-width: $tablet-width) {
     height: 730px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
   }
 }
 
