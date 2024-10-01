@@ -5,6 +5,45 @@
     width: unset;
     background-color: $base-accent;
   }
+
+  &:hover .burger__icon span,
+  &:focus-visible .burger__icon span {
+    background-color: $base-accent;
+  }
+
+  &:active .burger__icon span {
+    background-color: $base-accent-07;
+  }
+}
+
+.burger--is-open {
+  &:hover {
+    background-color: $base-white;
+    border-color: $base-white;
+  }
+
+  &:hover .burger__name--is-open,
+  &:focus-visible .burger__name--is-open {
+    color: $base-accent;
+  }
+
+  &:hover .burger__icon,
+  &:focus-visible .burger__icon {
+    background-color: $base-accent;
+  }
+
+  &:hover .burger__icon span,
+  &:focus-visible .burger__icon span {
+    background-color: $base-white;
+  }
+
+  &:active .burger__name--is-open {
+    color: $base-accent-07;
+  }
+
+  &:active .burger__icon span {
+    background-color: $base-white-07;
+  }
 }
 
 .burger__name {

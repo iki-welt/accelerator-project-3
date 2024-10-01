@@ -4,19 +4,41 @@
   width: min-content;
   padding: 0;
   text-transform: uppercase;
-  // letter-spacing: 2px;
   border: 1px solid $base-accent;
   border-radius: 28px;
   background-color: transparent;
+  color: $base-accent;
+  cursor: pointer;
 
   @include font-set(12px, 12px, 500);
   @include link-default;
-  color: $base-accent;
+
   &--dark {
     color: $base-white;
     border-color: $base-white;
   }
+
+  &:hover {
+    color: $base-white;
+    background-color: $base-accent;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    color: $base-white-07;
+    background-color: $base-accent;
+  }
+
+  &:disabled,
+  &--disabled {
+    border-color: $disabled-color;
+    color: $disabled-color;
+  }
 }
+
 .primary-button__name {
   width: max-content;
   padding: 16px 20px;
@@ -62,4 +84,94 @@
   &::after {
     background-color: $base-accent;
   }
+}
+
+.primary-button:hover .primary-button__icon {
+  background-color: $base-white;
+
+  &::after {
+    background-color: $base-accent;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.primary-button:focus-visible .primary-button__icon {
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.primary-button:active .primary-button__icon {
+  background-color: $base-white;
+
+  &::after {
+    background-color: $base-accent-07;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.primary-button:disabled .primary-button__icon,
+.primary-button--disabled .primary-button__icon {
+  background-color: $disabled-color;
+
+  &::after {
+    background-color: $base-accent-07;
+  }
+}
+
+.primary-button--dark {
+  &:hover {
+    background-color: $base-white;
+    border-color: $base-white;
+  }
+
+  &:hover .primary-button__name {
+    color: $base-accent;
+  }
+
+  &:hover .primary-button__icon {
+    background-color: $base-accent;
+  }
+
+  &:hover .primary-button__icon::after {
+    background-color: $base-white;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:focus-visible .primary-button__icon::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:active {
+    background-color: $base-white;
+    border-color: $base-white;
+  }
+
+  &:active .primary-button__name {
+    color: $base-accent-07;
+  }
+
+  &:active .primary-button__icon {
+    background-color: $base-accent;
+  }
+
+  &:active .primary-button__icon::after {
+    background-color: $base-white-07;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:disabled .primary-button__name {
+    color: $disabled-color;
+  }
+  &:disabled {
+    border-color: $disabled-color;
+  }
+}
+
+.primary-button--dark.primary-button--disabled {
+  border-color: $disabled-color;
+}
+
+.primary-button--dark.primary-button--disabled .primary-button__name{
+  color: $disabled-color;
 }

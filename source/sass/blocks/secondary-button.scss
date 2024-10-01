@@ -1,4 +1,42 @@
-// .secondary-button {}
+.secondary-button {
+  cursor: pointer;
+
+  &:hover .secondary-button__icon {
+    background-color: $base-white;
+  }
+
+  &:hover .secondary-button__icon::after {
+    background-color: $base-accent;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:focus-visible .secondary-button__icon {
+    background-color: $base-accent;
+  }
+
+  &:focus-visible .secondary-button__icon::after {
+    background-color: $base-white;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:active .secondary-button__icon {
+    background-color: $base-white;
+  }
+
+  &:active .secondary-button__icon::after {
+    background-color: $base-accent-07;
+  }
+
+  &:disabled .secondary-button__icon,
+  &--disabled .secondary-button__icon {
+    background-color: $disabled-color;
+  }
+
+  &:disabled .secondary-button__icon::after,
+  &--disabled .secondary-button__icon::after {
+    color: $base-white-07;
+  }
+}
 
 .secondary-button__icon {
   position: relative;

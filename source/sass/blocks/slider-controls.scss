@@ -59,16 +59,17 @@
   height: 26px;
   color: $base-accent;
   text-align: center;
+  border: 2px solid transparent;
   border-radius: 13px;
   background-color: transparent;
-  opacity: 0.5;
+  cursor: pointer;
 
   @include font-set(14px, 14px, 500);
 
   &--active {
     color: $base-white;
-    background-color: $base-accent;
-    opacity: 1;
+    background-color: $dark-accent;
+    border-color: $dark-accent;
   }
 
   @media (min-width: $tablet-width) {
@@ -78,6 +79,32 @@
 
     @include font-set(16px, 20px, 400);
   }
+
+  &:hover {
+    color: $base-accent;
+    background-color: transparent;
+    border-color: $base-accent;
+  }
+
+  &:focus-visible {
+    color: $base-accent;
+    background-color: $base-white;
+    border-color: $base-accent;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $dark-accent;
+    border-color: $dark-accent;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $base-accent;
+    background-color: transparent;
+    border-color: transparent;
+    opacity: 0.5;
+  }
 }
 
 .slider-controls__button {
@@ -86,6 +113,8 @@
   width: 22px;
   height: 22px;
   background-color: transparent;
+  border-radius: 11px;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -106,5 +135,30 @@
 
   &--prev::after {
     transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &:hover::after {
+    background-color: $base-accent-07;
+  }
+
+  &:focus-visible {
+    background-color: $base-white;
+  }
+
+  &:focus-visible::after {
+    background-color: $base-accent;
+  }
+
+  &:active {
+    background-color: $base-white;
+  }
+
+  &:active::after {
+    background-color: $base-accent-07;
+  }
+
+  &:disabled::after,
+  &--disabled::after {
+    background-color: $disabled-color;
   }
 }

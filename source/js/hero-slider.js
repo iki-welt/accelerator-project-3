@@ -51,4 +51,5 @@ const heroSlider = new Swiper('.hero__slider', {
 });
 
 heroSlider.on('slideChangeTransitionStart',onHeroSlideChange);
+heroSlider.on('afterInit',showPagination());
 heroSlider.on('slideChangeTransitionEnd',showPagination);

@@ -59,6 +59,17 @@
   opacity: 0.7;
 
   @include link-default;
+
+  &:hover,
+  &:focus-visible {
+    color: $base-white;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $base-white;
+    opacity: 0.3;
+  }
 }
 
 .main-nav__link--submenu {
@@ -104,4 +115,15 @@
 .main-nav__sublink {
   opacity: 0.6;
   @include link-default;
+
+  &:hover,
+  &:focus-visible {
+    color: $base-white;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $base-white;
+    opacity: 0.3;
+  }
 }

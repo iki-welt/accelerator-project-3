@@ -66,6 +66,18 @@
 
 .page-footer__nav-link {
   @include link-default;
+
+  &:hover {
+    color: $base-accent-07;
+  }
+
+  &:focus-visible {
+    color: $base-accent;
+  }
+
+  &:active {
+    color: $dark-accent;
+  }
 }
 
 .page-footer__privacy {
@@ -86,6 +98,18 @@
     justify-self: end;
     margin: 0;
     line-height: 18px;
+  }
+
+  &:hover {
+    color: $base-accent-07;
+  }
+
+  &:focus-visible {
+    color: $base-accent;
+  }
+
+  &:active {
+    color: $dark-accent;
   }
 }
 

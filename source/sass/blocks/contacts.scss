@@ -79,6 +79,21 @@
 
 .contacts__item-link {
   @include link-default;
+
+  &:hover {
+    color: $base-white-07;
+  }
+
+  &:focus-visible {
+    color: $base-black;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:active {
+    color: $base-white;
+    text-decoration: underline;
+  }
 }
 
 .contacts__pic-wrapper {

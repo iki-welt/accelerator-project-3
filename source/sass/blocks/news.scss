@@ -68,13 +68,37 @@
   margin: 0;
   border: 2px solid transparent;
   border-radius: 20px;
-  color: $base-accent;
+  color: $base-accent-07;
   text-transform: uppercase;
+  cursor: pointer;
 
   @include font-set (inherit, inherit, inherit);
 
   &--current {
+    color: $base-accent;
     border-color: $base-accent;
+  }
+
+  &:hover {
+    color: $base-accent;
+  }
+
+  &:focus-visible {
+    color: $base-accent;
+    background-color: $base-white;
+    border-color: $base-white;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $base-accent;
+    border-color: $base-accent;
+  }
+
+  &:disabled {
+    color: $disabled-color;
+    background-color: transparent;
+    border-color: $disabled-color;
   }
 
   @media (min-width: $tablet-width) {
