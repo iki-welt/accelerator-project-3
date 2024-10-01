@@ -33,8 +33,6 @@
   }
 }
 
-// .review-card__pic-wrapper {}
-
 .review-card__pic-wrapper img {
   border-radius: 50%;
 }
@@ -103,7 +101,6 @@
   }
 }
 
-// .review-card__content {}
 .review-card__title {
   margin: 0;
   margin-bottom: 20px;
@@ -111,8 +108,16 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 26px;
   }
 }
+
 .review-card__content blockquote {
   margin: 0;
 }

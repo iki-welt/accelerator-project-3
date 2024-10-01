@@ -1,16 +1,15 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
 const reviewsSlider = new Swiper('.reviews__slider', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Scrollbar],
   direction: 'horizontal',
   loop: false,
-  pagination: {
+  scrollbar: {
     el: '.slider-controls__pagination--reviews',
-    progressbarFillClass: 'slider-controls__pagination-fill',
-    type: 'progressbar',
-    clickable: false,
+    dragClass: 'slider-controls__pagination-fill',
+    hide: false,
   },
   navigation: {
     nextEl: '.slider-controls__button--reviews-next',
@@ -26,11 +25,17 @@ const reviewsSlider = new Swiper('.reviews__slider', {
       slidesPerView: 1.15,
       spaceBetween: 30,
       allowTouchMove: 'true',
+      scrollbar: {
+        dragSize: 326,
+      },
     },
     1440: {
       slidesPerView: 2,
       spaceBetween: 32,
       allowTouchMove: 'false',
+      scrollbar: {
+        dragSize: 394,
+      },
     },
   },
 });
