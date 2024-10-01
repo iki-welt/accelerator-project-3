@@ -37,6 +37,21 @@
   @media (min-width: $tablet-width) {
     line-height: 12px;
   }
+
+  &:hover .form-item__mark,
+  &:focus-visible .form-item__mark {
+    border-color: $base-white;
+  }
+
+  &:disabled .form-item__mark {
+    border-color: $base-white;
+    background-color: $base-white-07;
+  }
+
+  &:invalid .form-item__mark {
+    border-color: $error-color;
+    background-color: $error-color-02;
+  }
 }
 
 .form-item__inp {
