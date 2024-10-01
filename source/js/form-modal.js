@@ -1,3 +1,5 @@
+import { initSelect } from './custom-select';
+
 const modalOpenButtonEl = document.querySelector('.about__link');
 const modalEl = document.querySelector('.form-modal');
 const modalCloseButtonEl = modalEl.querySelector('.form-modal__close-button');
@@ -9,9 +11,7 @@ const onCloseModalClick = () => {
   closeModal();
 };
 
-const onSubmitModalClick = (evt) => {
-  evt.preventDefault();
-  // validate
+const onSubmitModalClick = () => {
   closeModal();
 };
 
@@ -19,10 +19,12 @@ function closeModal () {
   modalEl.classList.remove('form-modal--is-open');
   modalCloseButtonEl.removeEventListener('click', onCloseModalClick);
   modalSubmitButtonEl.removeEventListener('click', onSubmitModalClick);
+  initSelect(modalEl);
 }
 
 const openModal = () => {
   modalEl.classList.add('form-modal--is-open');
+  initSelect(modalEl);
   modalCloseButtonEl.addEventListener('click', onCloseModalClick);
   modalSubmitButtonEl.addEventListener('click', onSubmitModalClick);
 };

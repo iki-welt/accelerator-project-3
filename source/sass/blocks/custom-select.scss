@@ -1,7 +1,18 @@
 .custom-select {
   position: relative;
+  display: flex;
 
   @include font-set (14px, 14px, 400);
+}
+
+.custom-select__current-value {
+  flex-grow: 1;
+  height: 52px;
+  padding: 16px 53px 16px 25px;
+  color: $base-white;
+  text-align: start;
+  background-color: transparent;
+  border: none;
 
   &::after {
     content: "";
@@ -16,17 +27,14 @@
     mask-size: 16px 16px;
   }
 
+  &--modal {
+    color: $base-black;
+  }
+
   &--modal::after {
     top: 14px;
     background-color: $base-black;
   }
-}
-
-
-
-.custom-select__current-value {
-  height: 52px;
-  padding: 16px 53px 16px 25px;
 }
 
 .custom-select--modal .custom-select__current-value {
@@ -45,13 +53,21 @@
   overflow: hidden;
 
   @include list-default;
+
+  &--is-open {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.custom-select__item {
+.custom-select__button {
   min-height: 48px;
+  width: 100%;
   padding: 17px 20px;
+  text-align: start;
   color: $base-black;
   background-color: $base-white;
+  border: none;
 
   &:hover {
     color: $base-white;

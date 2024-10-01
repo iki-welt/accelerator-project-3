@@ -366,11 +366,15 @@
         </div>
 
         <div class="slider-controls programs__controls">
-          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--scroll slider-controls__pagination--programs"></div>
-          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--programs-prev">
+          <div
+            class="swiper-pagination slider-controls__pagination slider-controls__pagination--scroll slider-controls__pagination--programs">
+          </div>
+          <div
+            class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--programs-prev">
             <span class="visually-hidden">предыдущий слайд</span>
           </div>
-          <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--programs-next">
+          <div
+            class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--programs-next">
             <span class="visually-hidden">следующий слайд</span>
           </div>
         </div>
@@ -1145,11 +1149,15 @@
         </div>
 
         <div class="slider-controls news__controls">
-          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--news-prev">
+          <div
+            class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--news-prev">
             <span class="visually-hidden">предыдущий слайд</span>
           </div>
-          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--numbers slider-controls__pagination--news"></div>
-          <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--news-next">
+          <div
+            class="swiper-pagination slider-controls__pagination slider-controls__pagination--numbers slider-controls__pagination--news">
+          </div>
+          <div
+            class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--news-next">
             <span class="visually-hidden">следующий слайд</span>
           </div>
         </div>
@@ -1345,11 +1353,15 @@
         </div>
 
         <div class="slider-controls reviews__controls">
-          <div class="swiper-pagination slider-controls__pagination slider-controls__pagination--scroll slider-controls__pagination--reviews"></div>
-          <div class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--reviews-prev">
+          <div
+            class="swiper-pagination slider-controls__pagination slider-controls__pagination--scroll slider-controls__pagination--reviews">
+          </div>
+          <div
+            class="swiper-button-prev slider-controls__button slider-controls__button--prev slider-controls__button--reviews-prev">
             <span class="visually-hidden">предыдущий слайд</span>
           </div>
-          <div class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--reviews-next">
+          <div
+            class="swiper-button-next slider-controls__button slider-controls__button--next slider-controls__button--reviews-next">
             <span class="visually-hidden">следующий слайд</span>
           </div>
         </div>
@@ -1410,43 +1422,51 @@
           <ul class="form__list">
             <li class="form__item form-item">
               <label class="form-item__name" for="name">Имя</label>
-              <input class="form-item__inp form-item__inp--name" id="name" type="text">
+              <input class="form-item__inp form-item__inp--name" id="main-form-name" name="name" type="text">
             </li>
 
             <li class="form__item form-item">
               <label class="form-item__name" for="phone">Телефон</label>
-              <input class="form-item__inp form-item__inp--phone" id="phone" type="number">
+              <input class="form-item__inp form-item__inp--phone" id="main-form-phone" name="phone" type="number">
             </li>
 
             <li class="form__item form-item">
               <label class="form-item__name" for="comment">Ваше сообщение</label>
-              <textarea class="form-item__inp form-item__inp--comment" id="comment"></textarea>
+              <textarea class="form-item__inp form-item__inp--comment" id="main-form-comment" name="comment"></textarea>
             </li>
 
             <li class="form__item form-item">
               <p class="form-item__name">Выберите город</p>
-              <input class="form-item__inp form-item__inp--hidden" id="city" type="hidden">
               <div class="custom-select form-item__inp form-item__inp--city">
-                <div class="custom-select__current-value"></div>
+                <input class="form-item__inp form-item__inp--hidden" id="main-form-city" name="city" type="hidden">
+                <button class="custom-select__current-value" type="button"></button>
                 <ul class="custom-select__list">
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
                 </ul>
               </div>
             </li>
 
             <li class="form__item form-item">
               <label class="form-item__checkbox">
-                <input class="form-item__inp form-item__inp--hidden" type="checkbox" name="personal-data-acception"
+                <input class="form-item__inp form-item__inp--hidden" type="checkbox" name="form-personal-data-acception"
                   required>
                 <span class="form-item__mark"></span>
                 <span class="form-item__descr">Я согласен на обработку моих персональных данных</span>
               </label>
             </li>
           </ul>
-          <button class="primary-button primary-button--dark form__submit">
+          <button class="primary-button primary-button--dark form__submit" type="submit">
             <span class="primary-button__name form__submit-name">Отправить</span>
             <span class="primary-button__icon form__submit-icon"></span>
           </button>
@@ -1537,24 +1557,32 @@
           <ul class="form__list form__list--modal">
             <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-name">Имя</label>
-              <input class="form-item__inp form-item__inp--name form-item__inp--modal" id="modal-name" type="text">
+              <input class="form-item__inp form-item__inp--name form-item__inp--modal" id="modal-name" name="name" type="text">
             </li>
 
             <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-phone">Телефон</label>
-              <input class="form-item__inp form-item__inp--phone form-item__inp--modal" id="modal-phone" type="number">
+              <input class="form-item__inp form-item__inp--phone form-item__inp--modal" id="modal-phone" name="phone" type="number">
             </li>
 
             <li class="form__item form-item form-item--modal">
               <p class="form-item__name">Выберите город</p>
-              <input class="form-item__inp form-item__inp--hidden" id="city" type="hidden">
               <div class="custom-select form-item__inp form-item__inp--city form-item__inp--modal custom-select--modal">
-                <div class="custom-select__current-value custom-select__current-value"></div>
+                <input class="form-item__inp form-item__inp--hidden" id="modal-city" name="city" type="hidden">
+                <button class="custom-select__current-value custom-select__current-value custom-select__current-value--modal" type="button"></button>
                 <ul class="custom-select__list">
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
-                  <li class="custom-select__item">Санкт-Петербург</li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
+                  <li class="custom-select__item">
+                    <button class="custom-select__button" type="button">Санкт-Петербург</button>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -1562,13 +1590,13 @@
             <li class="form__item form-item form-item--modal">
               <label class="form-item__checkbox">
                 <input class="form-item__inp form-item__inp--hidden" type="checkbox"
-                  name="modal-personal-data-acception" required>
+                  name="personal-data-acception" required>
                 <span class="form-item__mark form-item__mark--modal"></span>
                 <span class="form-item__descr">Я согласен на обработку моих персональных данных</span>
               </label>
             </li>
           </ul>
-          <button class="primary-button form__submit form__submit--modal">
+          <button class="primary-button form__submit form__submit--modal" type="submit">
             <span class="primary-button__name form__submit-name">Отправить</span>
             <span class="primary-button__icon form__submit-icon"></span>
           </button>
