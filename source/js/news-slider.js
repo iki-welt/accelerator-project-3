@@ -61,16 +61,20 @@ const newsSlider = new Swiper('.news__slider', {
     },
     768: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 30,
       grid: {
         rows: 2,
+        fill: 'column',
       },
       allowTouchMove: 'true',
     },
     1440: {
       slidesPerView: 'auto',
+      slidesPerGroup: 3,
       spaceBetween: 32,
       grid: false,
+      loopAddBlankSlides: true,
       allowTouchMove: 'false',
     },
   },
@@ -85,22 +89,40 @@ const setStartPagination = () => {
       }
     });
   }
-  // const amounSlides = newsSlider.slides.length;
-  // console.log(newsSlider.pagination);
-  // console.log(amounSlides);
+};
+
+const setDynamicPagination = () => {
+  const ativeSlide = newsSlider.snapIndex;
+  if (ativeSlide >= 3) {
+    newsSlider.pagination.bullets.forEach((bullet, index) => {
+      bullet.style.display = 'flex';
+      const isShowed = (index + 2 === ativeSlide) || (index + 1 === ativeSlide) || (index === ativeSlide) || (index - 1 === ativeSlide);
+      if (!isShowed) {
+        bullet.style.display = 'none';
+      }
+    });
+  } else if (ativeSlide === 0) {
+    newsSlider.pagination.bullets.forEach((bullet) => {
+      bullet.style.display = 'flex';
+      setStartPagination();
+    });
+  }
 };
 
 const changeFirstSlideWidth = () => {
-  const activeSlide = sliderWrapper.querySelector('.swiper-slide-active');
-  if (!activeSlide.matches('.news-card--first')) {
-    const currentSlide = sliderWrapper.querySelector('.news-card--first');
-    setFirstSlide(currentSlide, activeSlide);
-    newsSlider.update();
+  if (sliderContainer.offsetWidth === 1240) {
+    const activeSlide = sliderWrapper.querySelector('.swiper-slide-active');
+    if (!activeSlide.matches('.news-card--first')) {
+      const currentSlide = sliderWrapper.querySelector('.news-card--first');
+      setFirstSlide(currentSlide, activeSlide);
+      newsSlider.update();
+    }
   }
 };
 
 newsSlider.on('afterInit', setSlides());
 newsSlider.on('afterInit', setStartPagination());
 newsSlider.on('slideChangeTransitionStart', changeFirstSlideWidth);
+newsSlider.on('slideChangeTransitionStart', setDynamicPagination);
 
 export { newsSlider };
