@@ -12,6 +12,11 @@ const onHeroSlideChange = () => {
   }
   const contentHeight = currentSlide.querySelector('.promo-slide__content').offsetHeight;
   sliderPagination.style.setProperty('--pagination-position', `${contentHeight}px`);
+  sliderPagination.style.display = 'none';
+};
+
+const showPagination = () => {
+  sliderPagination.style.display = 'flex';
 };
 
 const heroSlider = new Swiper('.hero__slider', {
@@ -46,3 +51,4 @@ const heroSlider = new Swiper('.hero__slider', {
 });
 
 heroSlider.on('slideChangeTransitionStart',onHeroSlideChange);
+heroSlider.on('slideChangeTransitionEnd',showPagination);

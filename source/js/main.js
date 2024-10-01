@@ -1,5 +1,6 @@
 import { setHeroPosition } from './hero-position';
 import { toggledMenu } from './burger-menu';
+import { setSlidesBullets } from './add-false-hero-bullets';
 import { initModalButton } from './form-modal';
 import { initNewsTabs } from './news-tabs';
 import './hero-slider';
@@ -9,5 +10,6 @@ import './reviews-slider';
 
 setHeroPosition();
 toggledMenu();
+setSlidesBullets();
 initModalButton();
 initNewsTabs();
