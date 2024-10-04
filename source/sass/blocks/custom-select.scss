@@ -13,6 +13,7 @@
   text-align: start;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -73,5 +74,4 @@
     color: $base-white;
     background-color: $base-accent;
   }
-  // &--current
 }

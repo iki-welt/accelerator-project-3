@@ -1422,23 +1422,23 @@
           <ul class="form__list">
             <li class="form__item form-item">
               <label class="form-item__name" for="name">Имя</label>
-              <input class="form-item__inp form-item__inp--name" id="main-form-name" name="name" type="text" placeholder="">
+              <input class="form-item__inp form-item__inp--name" id="main-form-name" name="name" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
             </li>
 
             <li class="form__item form-item">
               <label class="form-item__name" for="phone">Телефон</label>
-              <input class="form-item__inp form-item__inp--phone" id="main-form-phone" name="phone" type="number" placeholder="">
+              <input class="form-item__inp form-item__inp--phone" id="main-form-phone" name="phone" type="tel" pattern="^((\+7)+([0-9]){10})$" required>
             </li>
 
             <li class="form__item form-item">
               <label class="form-item__name" for="comment">Ваше сообщение</label>
-              <textarea class="form-item__inp form-item__inp--comment" id="main-form-comment" name="comment" placeholder=""></textarea>
+              <textarea class="form-item__inp form-item__inp--comment" id="main-form-comment" name="comment" required></textarea>
             </li>
 
             <li class="form__item form-item">
               <p class="form-item__name">Выберите город</p>
               <div class="custom-select form-item__inp form-item__inp--city">
-                <input class="form-item__inp form-item__inp--hidden" id="main-form-city" name="city" type="hidden">
+                <input class="form-item__inp form-item__inp--hidden" id="main-form-city" name="city" type="hidden" required>
                 <button class="custom-select__current-value" type="button"></button>
                 <ul class="custom-select__list">
                   <li class="custom-select__item">
@@ -1557,18 +1557,18 @@
           <ul class="form__list form__list--modal">
             <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-name">Имя</label>
-              <input class="form-item__inp form-item__inp--name form-item__inp--modal" id="modal-name" name="name" type="text" placeholder="">
+              <input class="form-item__inp form-item__inp--name form-item__inp--modal" id="modal-name" name="name" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
             </li>
 
             <li class="form__item form-item form-item--modal">
               <label class="form-item__name" for="modal-phone">Телефон</label>
-              <input class="form-item__inp form-item__inp--phone form-item__inp--modal" id="modal-phone" name="phone" type="number" placeholder="">
+              <input class="form-item__inp form-item__inp--phone form-item__inp--modal" id="modal-phone" name="phone" type="tel" pattern="^((\+7)+([0-9]){10})$" required>
             </li>
 
             <li class="form__item form-item form-item--modal">
               <p class="form-item__name">Выберите город</p>
               <div class="custom-select form-item__inp form-item__inp--city form-item__inp--modal custom-select--modal">
-                <input class="form-item__inp form-item__inp--hidden" id="modal-city" name="city" type="hidden">
+                <input class="form-item__inp form-item__inp--hidden" id="modal-city" name="city" type="hidden" required>
                 <button class="custom-select__current-value custom-select__current-value custom-select__current-value--modal" type="button"></button>
                 <ul class="custom-select__list">
                   <li class="custom-select__item">

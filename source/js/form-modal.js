@@ -5,17 +5,26 @@ const modalEl = document.querySelector('.form-modal');
 const modalCloseButtonEl = modalEl.querySelector('.form-modal__close-button');
 const modalSubmitButtonEl = modalEl.querySelector('.form__submit--modal');
 const modalFormEl = modalEl.querySelector('.form-modal__form');
+const modalInputEls = modalFormEl.querySelectorAll('input');
 
 const onCloseModalClick = () => {
   modalFormEl.reset();
   closeModal();
 };
 
-const onSubmitModalClick = () => {
-  closeModal();
+const onSubmitModalClick = (evt) => {
+  evt.preventDefault();
+  const formValidity = [];
+  modalInputEls.forEach((input) => formValidity.push(input.validity.valid));
+  const isInvalid = formValidity.includes(false);
+  if (!isInvalid) {
+    modalFormEl.submit();
+    closeModal();
+    modalFormEl.reset();
+  }
 };
 
-function closeModal () {
+function closeModal() {
   modalEl.classList.remove('form-modal--is-open');
   modalCloseButtonEl.removeEventListener('click', onCloseModalClick);
   modalSubmitButtonEl.removeEventListener('click', onSubmitModalClick);
@@ -33,4 +42,4 @@ const initModalButton = () => {
   modalOpenButtonEl.addEventListener('click', openModal);
 };
 
-export {initModalButton};
+export { initModalButton };
