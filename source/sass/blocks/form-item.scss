@@ -28,29 +28,16 @@
     line-height: 18px;
   }
 }
+
 .form-item__checkbox {
   position: relative;
   padding-left: 30px;
+  cursor: pointer;
 
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {
     line-height: 12px;
-  }
-
-  &:hover .form-item__mark,
-  &:focus-visible .form-item__mark {
-    border-color: $base-white;
-  }
-
-  &:disabled .form-item__mark {
-    border-color: $base-white;
-    background-color: $base-white-07;
-  }
-
-  &:invalid .form-item__mark {
-    border-color: $error-color;
-    background-color: $error-color-02;
   }
 }
 
@@ -76,6 +63,7 @@
 
   &--comment {
     min-height: 94px;
+    resize: none;
   }
 
   &--city {
@@ -97,6 +85,27 @@
       min-height: 88px;
     }
   }
+
+  &:hover {
+    border-color: $base-white;
+  }
+
+  &:focus-visible,
+  &:active {
+    border-color: $base-white;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $base-white-03;
+    border-color: $base-white;
+    opacity: 0.4;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $error-color;
+    background-color: $error-color-02;
+  }
 }
 
 .form-item__mark {
@@ -108,6 +117,7 @@
   width: 20px;
   height: 20px;
   border-radius: 2px;
+  border: 1px solid $base-white;
   background-color: $base-white;
 
   &--modal {
@@ -131,6 +141,48 @@
   }
 
   &--modal::after {
+    background-color: $base-white;
+  }
+}
+
+.form-item__inp[type="checkbox"] {
+
+  &:invalid+.form-item__mark {
+    border-color: $error-color;
+    background-color: $error-color-02;
+  }
+
+  &:hover+.form-item__mark,
+  &:focus-visible+.form-item__mark {
+    background-color: $base-accent;
+    border-color: $base-white;
+  }
+
+  &:disabled+.form-item__mark {
+    border-color: $base-white;
+    background-color: $base-white-07;
+  }
+}
+
+.form-item__inp[type="checkbox"]:checked {
+
+  &:hover+.form-item__mark,
+  &:focus-visible+.form-item__mark {
+    background-color: $base-accent;
+    border-color: $base-white;
+  }
+
+  &:hover+.form-item__mark::after,
+  &:focus-visible+.form-item__mark::after {
+    background-color: $base-white;
+  }
+
+  &:disabled+.form-item__mark {
+    border-color: $base-white;
+    background-color: $base-white-07;
+  }
+
+  &:disabled+.form-item__mark::after {
     background-color: $base-white;
   }
 }

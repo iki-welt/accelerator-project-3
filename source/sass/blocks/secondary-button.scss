@@ -1,6 +1,10 @@
 .secondary-button {
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover .secondary-button__icon {
     background-color: $base-white;
   }

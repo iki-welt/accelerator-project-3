@@ -73,6 +73,7 @@
 
   &:focus-visible {
     color: $base-accent;
+    outline: none;
   }
 
   &:active {
@@ -106,6 +107,7 @@
 
   &:focus-visible {
     color: $base-accent;
+    outline: none;
   }
 
   &:active {

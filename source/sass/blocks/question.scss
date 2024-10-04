@@ -35,6 +35,10 @@
     line-height: 34px;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover span:last-child,
   &:focus-visible span:last-child {
     background-color: transparent;
