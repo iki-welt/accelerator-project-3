@@ -5,21 +5,29 @@
 }
 
 .reviews__container {
-  padding-top: 50px;
+  padding-top: 56px;
   padding-bottom: 50px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    padding-top: 65px;
     padding-bottom: 60px;
   }
 }
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 3px;
+    margin-bottom: 45px;
   }
 }
 
@@ -46,6 +54,7 @@
   padding-top: 60px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
     margin-bottom: 40px;
   }
 }
@@ -58,14 +67,14 @@
     min-height: 417px;
   }
 
-  @media (min-width: $tablet-width) {
-    min-height: 483px;
+  @media (min-width: $desktop-width) {
+    height: 483px;
   }
 }
 
 .reviews__controls {
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 0;
 
   @media (min-width: $tablet-width) {

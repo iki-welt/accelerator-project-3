@@ -66,7 +66,7 @@ const newsSlider = new Swiper('.news__slider', {
       spaceBetween: 30,
       grid: {
         rows: 2,
-        fill: 'column',
+        fill: 'row',
       },
       allowTouchMove: 'true',
     },

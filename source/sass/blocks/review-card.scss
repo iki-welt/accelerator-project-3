@@ -1,9 +1,9 @@
 .review-card {
   display: grid;
-  gap: 25px;
+  gap: 24px;
   width: 290px;
   min-height: 472px;
-  padding: 32px 17px;
+  padding: 30px 15px;
   border: 2px solid $base-accent;
   border-radius: 16px;
 
@@ -11,20 +11,32 @@
     gap: 30px;
     width: 560px;
     min-height: 417px;
-    padding: 52px;
+    padding: 50px 51px 50px 50px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    align-items: start;
+    grid-template-rows: 90px auto;
     width: 604px;
     min-height: 483px;
-    padding-right: 48px;
+    padding-right: 47px;
+  }
+}
+
+.review-card.swiper-slide {
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 604px;
   }
 }
 
 .review-card__author {
   display: grid;
   grid-template-columns: 60px 1fr;
-  gap: 15px 10px;
+  gap: 16px 10px;
   align-items: center;
 
   @media (min-width: $tablet-width) {

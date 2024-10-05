@@ -96,7 +96,7 @@
   position: relative;
   display: block;
   width: fit-content;
-  padding: 12px 12px 6px 0;
+  padding: 13px 15px 5px 0;
   background-color: $base-color;
   border-top-right-radius: 12px;
   color: $base-accent;
@@ -106,33 +106,33 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -4px;
-    right: -11px;
+    bottom: -10px;
+    right: -19px;
     display: block;
-    width: 15px;
-    height: 20px;
-    border-bottom: 4px solid $base-color;
-    border-left: 4px solid $base-color;
-    border-bottom-left-radius: 13px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid $base-color;
+    border-left: 10px solid $base-color;
+    border-bottom-left-radius: 26px;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: -16px;
-    left: -4px;
+    top: -20px;
+    left: -10px;
     display: block;
-    width: 15px;
-    height: 20px;
-    border-bottom: 4px solid $base-color;
-    border-left: 4px solid $base-color;
-    border-bottom-left-radius: 13px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid $base-color;
+    border-left: 10px solid $base-color;
+    border-bottom-left-radius: 26px;
   }
 }
 
 .news-card__title {
   position: relative;
-  width: 211px;
+  width: 200px;
   padding: 10px 18px 4px 0;
   margin: 0;
   border-top-right-radius: 12px;
@@ -142,19 +142,21 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -4px;
-    right: -11px;
+    bottom: -10px;
+    right: -20px;
     display: block;
-    width: 15px;
-    height: 20px;
-    border-bottom: 4px solid $base-color;
-    border-left: 4px solid $base-color;
-    border-bottom-left-radius: 13px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid $base-color;
+    border-left: 10px solid $base-color;
+    border-bottom-left-radius: 26px;
   }
 
   @media (min-width: $tablet-width) {
     width: 207px;
     padding: 10px 16px 6px 0;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -185,14 +187,14 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -4px;
-    right: -11px;
+    bottom: -10px;
+    right: -20px;
     display: block;
-    width: 15px;
-    height: 20px;
-    border-bottom: 4px solid $base-color;
-    border-left: 4px solid $base-color;
-    border-bottom-left-radius: 13px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid $base-color;
+    border-left: 10px solid $base-color;
+    border-bottom-left-radius: 26px;
   }
 
   @media (min-width: $tablet-width) {
