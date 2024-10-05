@@ -1,7 +1,7 @@
 .form__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 21px;
 
   @include list-default;
 
@@ -10,9 +10,21 @@
   }
 
   @media (min-width: $tablet-width) {
-    &--modal {
       gap: 20px;
-    }
+  }
+}
+
+.form__item:last-child {
+  margin-top: -3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
+  }
+}
+
+.form__item:nth-last-child(2) {
+  @media (min-width: $desktop-width) {
+    margin-top: -2px;
   }
 }
 
@@ -26,7 +38,7 @@
 
   @media (min-width: $tablet-width) {
     min-width: 352px;
-    margin-top: 40px;
+    margin-top: 44px;
 
     &--modal {
       min-width: 194px;
@@ -41,4 +53,5 @@
 
 .form__submit span:first-child {
   margin: 0 auto;
+  color: $base-white;
 }

@@ -4,6 +4,10 @@
   gap: 10px;
 
   @include list-default;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .socials__link {

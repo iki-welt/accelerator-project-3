@@ -1,15 +1,13 @@
 .form-item {
   display: grid;
-  gap: 12px;
+  gap: 11px;
 
   &--modal {
     gap: 8px;
   }
 
   @media (min-width: $tablet-width) {
-    &--modal {
       gap: 12px;
-    }
   }
 }
 
@@ -42,7 +40,7 @@
 }
 
 .form-item__inp {
-  padding: 16px 25px;
+  padding: 16px 25px 15px 25px;
   color: $base-white;
   background-color: transparent;
   border: 1px solid $base-white-03;
@@ -78,7 +76,7 @@
     }
 
     &--comment {
-      min-height: 88px;
+      min-height: 90px;
     }
   }
 
@@ -223,4 +221,11 @@
 
 .form-item__descr {
   opacity: 0.9;
+}
+
+
+.form-item__descr br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
