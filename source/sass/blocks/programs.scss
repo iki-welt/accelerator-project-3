@@ -12,11 +12,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    padding-top: 62px;
     padding-bottom: 60px;
+    gap: 42px;
   }
 }
 
@@ -27,6 +29,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
     grid-row: 1/2;
+    align-self: center;
     margin: 0;
   }
 }
@@ -45,6 +48,11 @@
 .programs__link span:first-child {
   padding-right: 33px;
   padding-left: 31px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 29px;
+    padding-left: 30px;
+  }
 }
 
 .programs__slider {

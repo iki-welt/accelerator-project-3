@@ -4,7 +4,7 @@
 }
 
 .grant__container {
-  padding-top: 70px;
+  padding-top: 71px;
   padding-bottom: 70px;
 
   @media (min-width: $tablet-width) {
@@ -23,7 +23,7 @@
 
 .grant__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   color: $base-white;
 
   @media (min-width: $tablet-width) {
@@ -37,6 +37,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
+    width: 500px;
   }
 }
 
@@ -78,10 +79,12 @@
   gap: 15px;
 
   @include list-default;
+  padding-left: 16px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 305px);
     gap: 25px 48px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,7 +95,7 @@
 
 .grant__item {
   position: relative;
-  padding: 25px 26px;
+  padding: 24px 24px 24px 25px;
   border: 1px solid $base-white;
   border-radius: 16px;
   counter-increment: grant 1;
@@ -100,8 +103,8 @@
   &::before {
     content: counter(grant);
     position: absolute;
-    top: -5px;
-    left: -15px;
+    top: -6px;
+    left: -16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,11 +117,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 31px 50px 31px 26px;
+    padding: 30px 40px 30px 25px;
 
     &::before {
-      top: -15px;
-      left: -20px;
+      top: -16px;
+      left: -21px;
       width: 42px;
       height: 42px;
       font-size: 22px;
@@ -127,6 +130,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 31px 26px;
+    padding: 30px 26px 30px 25px;
   }
 }

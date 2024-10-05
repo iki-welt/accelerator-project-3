@@ -70,12 +70,15 @@
 
   @media (min-width: $tablet-width) {
     width: 173px;
+    padding: 19px 18px 5px;
     font-size: 20px;
     line-height: 14px;
   }
 
   @media (min-width: $desktop-width) {
     width: 194px;
+    font-size: 24px;
+    line-height: 17px;
   }
 }
 
@@ -91,6 +94,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 202px 30px;
+    padding: 12px 18px 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -109,6 +113,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    min-height: 55px;
     font-size: 14px;
     line-height: 18px;
   }
@@ -117,4 +124,8 @@
 .program-card__link {
   align-self: center;
   margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 1px;
+  }
 }
