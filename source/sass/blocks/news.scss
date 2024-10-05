@@ -28,6 +28,7 @@
 
 .news__tab-list {
   @include list-default;
+
   display: flex;
   gap: 12px;
   max-width: 100vw;

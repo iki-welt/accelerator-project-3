@@ -1,5 +1,6 @@
 .overlayed-pic {
   position: relative;
+
   &::before {
     content: "";
     display: block;

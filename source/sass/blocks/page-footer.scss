@@ -1,4 +1,3 @@
-// .page-footer {}
 .page-footer__container {
   display: flex;
   flex-direction: column;
@@ -50,7 +49,9 @@
   gap: 20px 30px;
   justify-content: center;
   flex-wrap: wrap;
+
   @include list-default;
+
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -84,6 +85,7 @@
 .page-footer__privacy {
   margin-bottom: 10px;
   color: inherit;
+
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {
@@ -119,6 +121,7 @@
   margin: 0;
   margin-bottom: 15px;
   opacity: 0.6;
+
   @include font-set(12px, 14px, 400);
 
   @media (min-width: $tablet-width) {

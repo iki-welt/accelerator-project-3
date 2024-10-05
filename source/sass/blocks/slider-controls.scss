@@ -9,15 +9,16 @@
     align-items: center;
   }
 }
-.slider-controls__pagination {
-    display: none;
 
-    &--numbers {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      justify-self: center;
-    }
+.slider-controls__pagination {
+  display: none;
+
+  &--numbers {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    justify-self: center;
+  }
 
   @media (min-width: $tablet-width) {
     &--scroll {
@@ -129,7 +130,7 @@
     background-color: $base-accent;
   }
 
-  &--next::after{
+  &--next::after {
     transform: translate(-50%, -50%);
   }
 

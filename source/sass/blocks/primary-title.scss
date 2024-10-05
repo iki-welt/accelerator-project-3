@@ -2,7 +2,6 @@
   color: $base-accent;
 
   @include font-set(20px, 20px, 400);
-  // &--light {}
 
   @media (min-width: $tablet-width) {
     font-size: 34px;

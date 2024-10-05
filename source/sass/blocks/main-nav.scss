@@ -26,9 +26,9 @@
 
 .main-nav__overlay {
   &--is-open {
-  width: 100vw;
-  height: 100vh;
-  background-color: $overlay-dark;
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay-dark;
   }
 }
 
@@ -102,18 +102,20 @@
   text-transform: capitalize;
 
   @include list-default;
+
   padding-top: 20px;
   padding-left: 16px;
 
   @include font-set(16px, 16px, 400);
 }
 
-.main-nav__link--submenu-open + .main-nav__submenu {
+.main-nav__link--submenu-open+.main-nav__submenu {
   display: flex;
 }
 
 .main-nav__sublink {
   opacity: 0.6;
+
   @include link-default;
 
   &:hover,

@@ -13,11 +13,6 @@
   @include font-set(12px, 12px, 500);
   @include link-default;
 
-  &--dark {
-    color: $base-white;
-    border-color: $base-white;
-  }
-
   &:hover {
     color: $base-white;
     background-color: $base-accent;
@@ -120,6 +115,9 @@
 }
 
 .primary-button--dark {
+  color: $base-white;
+  border-color: $base-white;
+
   &:hover {
     background-color: $base-white;
     border-color: $base-white;
@@ -163,6 +161,7 @@
   &:disabled .primary-button__name {
     color: $disabled-color;
   }
+
   &:disabled {
     border-color: $disabled-color;
   }
@@ -172,6 +171,6 @@
   border-color: $disabled-color;
 }
 
-.primary-button--dark.primary-button--disabled .primary-button__name{
+.primary-button--dark.primary-button--disabled .primary-button__name {
   color: $disabled-color;
 }

@@ -101,25 +101,6 @@
   }
 }
 
-// true pag
-.hero__slider-pagination {
-  --pagination-position: 0;
-  left: 15px;
-  bottom: calc(var(--pagination-position) + 20px);
-  z-index: 10;
-
-  @media (min-width: $tablet-width) {
-    bottom: calc(var(--pagination-position) + 60px);
-    left: 45px;
-  }
-
-  @media (min-width: $desktop-width) {
-    bottom: calc(var(--pagination-position) + 64px);
-    left: 100px;
-  }
-}
-// end true pag
-
 .promo-slide__title {
   padding: 20px 15px 16px 14px;
   margin: 0;
@@ -151,7 +132,7 @@
 .promo-slide__content p {
   position: relative;
   width: 267px;
-  padding: 0 14px 15px 14px;
+  padding: 0 14px 15px;
   margin: 0;
   background-color: $base-white;
   border-bottom-right-radius: 14px;
@@ -217,5 +198,3 @@
     padding-right: 50px;
   }
 }
-
-// .promo-slide__link {}

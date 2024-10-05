@@ -21,7 +21,7 @@
         <nav class="main-nav page-header__nav">
           <div class="main-nav__overlay">
             <div class="main-nav__container">
-              <button class="burger primary-button main-nav__burger">
+              <button class="burger primary-button main-nav__burger" type="button">
                 <span class="primary-button__name burger__name">Меню</span>
                 <span class="primary-button__icon burger__icon">
                   <span></span>
@@ -216,7 +216,7 @@
           предоставляя им инструменты для решения сложных проблем,
           c которыми сталкиваются в мире. Цель центра — наделить этих
           людей способностью инициировать значимые изменения.</p>
-        <a class="primary-button about__link">
+        <a class="primary-button about__link" href="#">
           <span class="primary-button__name">подробнее о проекте</span>
           <span class="primary-button__icon"></span>
         </a>
@@ -225,7 +225,7 @@
       <ul class="about__stat-list">
         <li class="about__stat-item stat-item">
           <p><strong>Более&nbsp;250 программ</strong></p>
-          <p>учебных и рабочих, разной<br><span> </span>длительностью от&nbsp;3&nbsp;месяцев до 1 года</p>
+          <p>учебных и рабочих, разной<br><span></span>длительностью от&nbsp;3&nbsp;месяцев до 1 года</p>
         </li>
         <li class="about__stat-item stat-item">
           <p><strong>Более&nbsp;3000 участников</strong></p>
@@ -381,7 +381,7 @@
 
       </div>
 
-      <a class="primary-button programs__link">
+      <a class="primary-button programs__link" href="#">
         <span class="primary-button__name">все программы</span>
         <span class="primary-button__icon"></span>
       </a>
@@ -1390,7 +1390,7 @@
         <div class="contacts__item">
           <dt class="contacts__item-name">Email</dt>
           <dd class="contacts__item-value">
-            <a class="contacts__item-link" href="mail-to:info@stazh.ru">Info@stazh.ru</a>
+            <a class="contacts__item-link" href="mailto:info@stazh.ru">Info@stazh.ru</a>
           </dd>
         </div>
       </dl>
@@ -1421,25 +1421,25 @@
         <form class="form-block__form form" action="https://echo.htmlacademy.ru/" method="post">
           <ul class="form__list">
             <li class="form__item form-item">
-              <label class="form-item__name" for="name">Имя</label>
+              <label class="form-item__name" for="main-form-name">Имя</label>
               <input class="form-item__inp form-item__inp--name" id="main-form-name" name="name" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
             </li>
 
             <li class="form__item form-item">
-              <label class="form-item__name" for="phone">Телефон</label>
+              <label class="form-item__name" for="main-form-phone">Телефон</label>
               <input class="form-item__inp form-item__inp--phone" id="main-form-phone" name="phone" type="tel" pattern="^((\+7)+([0-9]){10})$" required>
             </li>
 
             <li class="form__item form-item">
-              <label class="form-item__name" for="comment">Ваше сообщение</label>
+              <label class="form-item__name" for="main-form-comment">Ваше сообщение</label>
               <textarea class="form-item__inp form-item__inp--comment" id="main-form-comment" name="comment" required></textarea>
             </li>
 
             <li class="form__item form-item">
               <p class="form-item__name">Выберите город</p>
               <div class="custom-select form-item__inp form-item__inp--city">
-                <input class="form-item__inp form-item__inp--hidden" id="main-form-city" name="city" type="hidden" required>
-                <button class="custom-select__current-value" type="button"></button>
+                <input class="form-item__inp form-item__inp--hidden" id="main-form-city" name="city" type="hidden">
+                <button class="custom-select__current-value" type="button"><span class="visually-hidden">Выбрать город</span></button>
                 <ul class="custom-select__list">
                   <li class="custom-select__item">
                     <button class="custom-select__button" type="button">Санкт-Петербург</button>
@@ -1549,7 +1549,7 @@
   <section class="form-modal">
     <div class="form-modal__overlay">
       <div class="form-modal__popup">
-        <button class="form-modal__close-button" type="button"></button>
+        <button class="form-modal__close-button" type="button"><span class="visually-hidden">Закрыть форму</span></button>
         <h2 class="primary-title form-modal__title">Напишите нам</h2>
         <p class="form-modal__intro">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
 
@@ -1568,8 +1568,8 @@
             <li class="form__item form-item form-item--modal">
               <p class="form-item__name">Выберите город</p>
               <div class="custom-select form-item__inp form-item__inp--city form-item__inp--modal custom-select--modal">
-                <input class="form-item__inp form-item__inp--hidden" id="modal-city" name="city" type="hidden" required>
-                <button class="custom-select__current-value custom-select__current-value custom-select__current-value--modal" type="button"></button>
+                <input class="form-item__inp form-item__inp--hidden" id="modal-city" name="city" type="hidden">
+                <button class="custom-select__current-value custom-select__current-value--modal" type="button"><span class="visually-hidden">Выбрать город</span></button>
                 <ul class="custom-select__list">
                   <li class="custom-select__item">
                     <button class="custom-select__button" type="button">Санкт-Петербург</button>

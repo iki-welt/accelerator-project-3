@@ -25,10 +25,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    &.swiper-slide {
-      width: 286px;
-    }
-
     &:nth-child(odd) {
       height: 400px;
     }
@@ -40,6 +36,12 @@
     &--first.swiper-slide {
       width: 604px;
     }
+  }
+}
+
+.news-card.swiper-slide {
+  @media (min-width: $desktop-width) {
+    width: 286px;
   }
 }
 
@@ -55,6 +57,7 @@
 .news-card:nth-child(even) .news-card__pic-wrapper {
   height: 240px;
   overflow: hidden;
+
   @media (min-width: $tablet-width) {
     height: unset;
   }
@@ -218,5 +221,3 @@
     line-height: 18px;
   }
 }
-
-// .news-card__link {}

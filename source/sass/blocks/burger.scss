@@ -1,11 +1,6 @@
 .burger {
   background-color: $base-white;
 
-  &--is-open {
-    width: unset;
-    background-color: $base-accent;
-  }
-
   &:hover .burger__icon span,
   &:focus-visible .burger__icon span {
     background-color: $base-accent;
@@ -17,6 +12,9 @@
 }
 
 .burger--is-open {
+  width: unset;
+  background-color: $base-accent;
+
   &:hover {
     background-color: $base-white;
     border-color: $base-white;

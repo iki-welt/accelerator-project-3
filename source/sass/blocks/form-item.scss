@@ -130,7 +130,7 @@
   }
 }
 
-.form-item__inp[type="checkbox"]:checked+.form-item__mark {
+.form-item__inp[type="checkbox"]:checked + .form-item__mark {
   &::after {
     content: "";
     position: absolute;
@@ -151,72 +151,72 @@
 }
 
 .form-item__inp[type="checkbox"] {
-  &:user-invalid+.form-item__mark {
+  &:user-invalid + .form-item__mark {
     border-color: $error-color;
     background-color: $error-color-02;
   }
 
-  &:hover+.form-item__mark,
-  &:focus-visible+.form-item__mark {
+  &:hover + .form-item__mark,
+  &:focus-visible + .form-item__mark {
     background-color: $base-accent;
     border-color: $base-white;
   }
 
-  &:disabled+.form-item__mark {
+  &:disabled + .form-item__mark {
     border-color: $base-white;
     background-color: $base-white-07;
   }
 
-  &:hover+.form-item__mark--modal,
-  &:focus-visible+.form-item__mark--modal {
+  &:hover + .form-item__mark--modal,
+  &:focus-visible + .form-item__mark--modal {
     background-color: $base-white;
     border-color: $base-accent;
   }
 
-  &:disabled+.form-item__mark--modal {
+  &:disabled + .form-item__mark--modal {
     border-color: $disabled-color-05;
     background-color: $disabled-color-02;
   }
 }
 
 .form-item__inp[type="checkbox"]:checked {
-  &:hover+.form-item__mark,
-  &:focus-visible+.form-item__mark {
+  &:hover + .form-item__mark,
+  &:focus-visible + .form-item__mark {
     background-color: $base-accent;
     border-color: $base-white;
   }
 
-  &:hover+.form-item__mark::after,
-  &:focus-visible+.form-item__mark::after {
+  &:hover + .form-item__mark::after,
+  &:focus-visible + .form-item__mark::after {
     background-color: $base-white;
   }
 
-  &:disabled+.form-item__mark {
+  &:disabled + .form-item__mark {
     border-color: $base-white;
     background-color: $base-white-07;
   }
 
-  &:disabled+.form-item__mark::after {
+  &:disabled + .form-item__mark::after {
     background-color: $base-white;
   }
 
-  &:hover+.form-item__mark--modal,
-  &:focus-visible+.form-item__mark--modal {
+  &:hover + .form-item__mark--modal,
+  &:focus-visible + .form-item__mark--modal {
     background-color: $base-white;
     border-color: $base-accent;
   }
 
-  &:hover+.form-item__mark--modal::after,
-  &:focus-visible+.form-item__mark--modal::after {
+  &:hover + .form-item__mark--modal::after,
+  &:focus-visible + .form-item__mark--modal::after {
     background-color: $base-accent;
   }
 
-  &:disabled+.form-item__mark--modal {
+  &:disabled + .form-item__mark--modal {
     border-color: $disabled-color-05;
     background-color: $disabled-color-02;
   }
 
-  &:disabled+.form-item__mark--modal::after {
+  &:disabled + .form-item__mark--modal::after {
     background-color: $base-black;
   }
 }

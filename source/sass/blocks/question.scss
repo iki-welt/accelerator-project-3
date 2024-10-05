@@ -1,14 +1,9 @@
-// .question {}
 .question__wrapper {
   border: 2px solid $base-accent;
   border-radius: 14px;
 
   &[open] {
     background-color: $base-accent;
-  }
-
-  &[open] summary {
-    padding-bottom: 0;
   }
 }
 
@@ -69,7 +64,7 @@
   }
 
   &:disabled span:last-child::after,
-  &:disabled span:last-child::after,
+  &--disabled span:last-child::after,
   &:disabled span:last-child::before,
   &--disabled span:last-child::before {
     background-color: $base-white;
@@ -77,6 +72,7 @@
 }
 
 .question__wrapper[open] summary {
+  padding-bottom: 0;
   color: $base-white;
 
   &:hover span:last-child,

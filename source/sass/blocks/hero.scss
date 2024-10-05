@@ -19,6 +19,7 @@
 
 .hero__slider-pagination {
   --pagination-position: 0;
+
   position: absolute;
   left: 15px;
   bottom: calc(var(--pagination-position) + 20px);
@@ -102,4 +103,3 @@
     min-width: 1440px;
   }
 }
-// .hero__slide {}
