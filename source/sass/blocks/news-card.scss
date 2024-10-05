@@ -32,16 +32,18 @@
     &:nth-child(even) {
       height: 400px;
     }
-
-    &--first.swiper-slide {
-      width: 604px;
-    }
   }
 }
 
 .news-card.swiper-slide {
   @media (min-width: $desktop-width) {
     width: 286px;
+  }
+}
+
+.news-card--first.swiper-slide {
+  @media (min-width: $desktop-width) {
+    width: 604px;
   }
 }
 
