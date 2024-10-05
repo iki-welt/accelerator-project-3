@@ -50,11 +50,17 @@
     left: 45px;
     height: 40px;
     padding: 14px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     &::before {
-      right: -8px;
-      width: 12px;
-      height: 12px;
+      right: -17px;
+      bottom: -10px;
+      width: 27px;
+      height: 27px;
+      border-bottom-width: 10px;
+      border-left-width: 10px;
+      border-bottom-left-radius: 27px;
     }
   }
 
@@ -74,6 +80,12 @@
 
   &--is-active {
     background-color: $dark-accent;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
   }
 
   &:hover {

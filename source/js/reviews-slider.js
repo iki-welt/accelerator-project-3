@@ -14,6 +14,7 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   navigation: {
     nextEl: '.slider-controls__button--reviews-next',
     prevEl: '.slider-controls__button--reviews-prev',
+    disabledClass: 'slider-controls__button--disabled',
   },
   breakpoints: {
     320: {

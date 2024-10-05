@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 16px 14px 16px 15px;
+  gap: 14px;
+  padding: 16px 14px 14px 20px;
   border: 1px solid $base-white;
   border-radius: 16px;
 
@@ -13,10 +13,10 @@
     width: 42px;
     height: 42px;
     position: absolute;
-    top: -22px;
-    left: -20px;
+    top: -23px;
+    left: -21px;
     background-color: $base-accent;
-    background-size: 18px 22px;
+    background-size: 22px 26px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("/__spritemap#sprite-star-view");
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 14px;
+    padding: 16px 20px 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,6 +38,8 @@
 }
 
 .stat-item p {
+  width: 210px;
+
   @include font-set(14px, 20px, 300);
 
 

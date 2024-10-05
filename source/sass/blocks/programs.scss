@@ -5,7 +5,7 @@
 }
 
 .programs__container {
-  padding-top: 50px;
+  padding-top: 56px;
   padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
@@ -22,7 +22,7 @@
 
 .programs__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
@@ -40,6 +40,11 @@
     justify-self: end;
     margin: 0;
   }
+}
+
+.programs__link span:first-child {
+  padding-right: 33px;
+  padding-left: 31px;
 }
 
 .programs__slider {
@@ -99,7 +104,7 @@
 
 .programs__controls {
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 0;
 
   @media (min-width: $tablet-width) {

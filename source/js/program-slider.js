@@ -14,6 +14,7 @@ const programSlider = new Swiper('.programs__slider', {
   navigation: {
     nextEl: '.slider-controls__button--programs-next',
     prevEl: '.slider-controls__button--programs-prev',
+    disabledClass: 'slider-controls__button--disabled',
   },
   breakpoints: {
     320: {

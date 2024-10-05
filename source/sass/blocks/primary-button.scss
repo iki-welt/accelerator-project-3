@@ -32,13 +32,19 @@
     border-color: $disabled-color;
     color: $disabled-color;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .primary-button__name {
   width: max-content;
-  padding: 16px 20px;
+  padding: 15px 21px 15px 20px;
 
   @media (min-width: $tablet-width) {
+    letter-spacing: 0.3px;
     padding: 20px 30px;
   }
 }
@@ -48,7 +54,7 @@
   display: block;
   width: 34px;
   height: 34px;
-  margin: 5px 5px 5px 0;
+  margin: 4px 5px 4px 0;
   border-radius: 17px;
   background-color: $base-accent;
 

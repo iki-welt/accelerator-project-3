@@ -58,14 +58,14 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -4px;
-    right: -11px;
+    bottom: -10px;
+    right: -20px;
     display: block;
-    width: 15px;
-    height: 20px;
-    border-bottom: 4px solid $base-white;
-    border-left: 4px solid $base-white;
-    border-bottom-left-radius: 13px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid $base-white;
+    border-left: 10px solid $base-white;
+    border-bottom-left-radius: 28px;
   }
 
   @media (min-width: $tablet-width) {
@@ -83,7 +83,7 @@
   display: grid;
   grid-template-columns: 188px 30px;
   gap: 16px;
-  padding: 12px 18px 15px;
+  padding: 13px 18px 14px;
   background-color: $base-white;
   border-top-right-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -116,4 +116,5 @@
 
 .program-card__link {
   align-self: center;
+  margin-bottom: 2px;
 }

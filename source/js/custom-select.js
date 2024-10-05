@@ -10,6 +10,7 @@ const onSelectItemClick = (evt, input, selectButton) => {
 
 const onSelectClick = (input, selectButton, selectList) => {
   selectList.classList.toggle('custom-select__list--is-open');
+  selectButton.classList.toggle('custom-select__current-value--is-open');
   if (selectList.classList.contains('custom-select__list--is-open')) {
     selectList.addEventListener('click', (evt) => onSelectItemClick(evt, input, selectButton));
   } else {

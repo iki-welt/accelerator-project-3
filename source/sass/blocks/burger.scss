@@ -45,12 +45,16 @@
 }
 
 .burger__name {
-  padding: 20px;
+  padding: 20px 20px 19px;
   font-size: 14px;
   line-height: 14px;
 
   &--is-open {
     color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 21px 19px 20px;
   }
 }
 
@@ -59,6 +63,7 @@
   width: 46px;
   height: 46px;
   border-radius: 23px;
+  margin: 4px 5px 4px 0;
 
   &::after {
     display: none;
@@ -66,6 +71,10 @@
 
   &--is-open {
     background-color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 4px 4px 4px 0;
   }
 }
 

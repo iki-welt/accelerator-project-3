@@ -49,6 +49,7 @@ const newsSlider = new Swiper('.news__slider', {
   navigation: {
     nextEl: '.slider-controls__button--news-next',
     prevEl: '.slider-controls__button--news-prev',
+    disabledClass: 'slider-controls__button--disabled',
   },
   breakpoints: {
     320: {
