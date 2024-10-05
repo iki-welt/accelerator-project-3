@@ -26,6 +26,7 @@
 }
 
 .form-block__container {
+  position: relative;
   padding: 43px 10px 40px;
 
   @media (min-width: $tablet-width) {

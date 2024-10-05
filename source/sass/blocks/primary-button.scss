@@ -33,6 +33,19 @@
     color: $disabled-color;
   }
 
+  &:hover .primary-button__name {
+    color: $base-white;
+  }
+
+  &:active .primary-button__name {
+    color: $base-white-07;
+  }
+
+  &:disabled .primary-button__name,
+  &--disabled .primary-button__name {
+    color: $disabled-color;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
